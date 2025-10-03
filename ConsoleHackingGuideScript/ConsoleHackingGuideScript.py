@@ -1,3 +1,6 @@
+# Imports a URL request library to download files
+import urllib.request
+# Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
@@ -48,6 +51,25 @@ def guide3ds():
     while loopvar >= 1:
         print("")
         loopvar = loopvar - 1
-    print("This script will now download all needed files for the guide. All sources can be found on the script github")
+    print("Welcome to the Nintendo 3ds homebrew guide. We will begin by going over key information.")
+    answer = str(input("Press any key to continue"))
+    print("")
+    print("Compatible systems for this guide: Nintendo 3ds, 3ds XL/LL, 2ds, New 3ds, New 3ds XL/LL, New 2ds XL/LL")
+    print("Supported regons: all")
+    print("What you need: A computer, a way to read and write to your 3ds system's SD/Micro SD card")
+    print("If you do not meet these requirements, or wish to go back, type n on the upcoming prompt. Any other input will continue the guide")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Continue?"))
+        if answer == "n":
+            print("The guide will now go back to the selection menu")
+            guidecontinue()
+            activeinput = int(0)
+        else:
+            activeinput = int(0)
+    print("")
+    print("The guide will now continue")
+    print("Before starting this guide, we will check if your system already has CFW installed.")
+
 
 guidedisclaimer()
