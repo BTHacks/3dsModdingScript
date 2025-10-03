@@ -3,6 +3,11 @@ import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 # Imports OS library for directory creation
 import os
+# Directory creation usage:
+# try:
+#   os.makedirs("directorypath")
+# except FileExistsError
+#   pass
 
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
@@ -122,7 +127,7 @@ def guide3dsold():
         pass
     urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\MSET9-v2.1.zip")
     print("")
-    print("Section I: Prep work")
+    print("Section I: Prep work") # Instructions in sections will use input check functions rather than print functions so you can stop and read each step. This is not a mistake, but an intended function
     answer = str(input("Step 1: Insert your SD card into your computer"))
     answer = str(input("Step 2: Copy all files from MSET9.zip to the root of your SD card. If any files already exist, override them."))
     answer = str(input("Step 3: Run the MSET9 script (MSET9-windows.bat)"))
@@ -144,6 +149,7 @@ def guide3dsold():
     print("")
     print("")
     print("Section II: MSET9")
-
+    print("In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer)")
+    answer = str(input("These instructions must be followed EXACTLY, so double check EVERYTHING you are doing to avoid errors!"))
 
 guidedisclaimer()
