@@ -1,7 +1,8 @@
 # Imports a URL request library to download files
 import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
-
+# Imports OS library for directory creation
+import os
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
     print("Welcome to the console hacking guide! This is a simple python script with instructions for console modding!")
@@ -106,5 +107,27 @@ def guide3ds():
         else:
             print("Invalid input, try again.")
 
+# Functon for the "Old 3ds" section of the guide
+def guide3dsold():
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    print("We will now install CFW on your system using the MSET9 method")
+    print("Any required files will be downloaded to C:\ConsoleHackingScript")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/ ")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\MSET9-v2.1.zip")
+    print("")
+    print("Section I: Prep work")
+    answer = str(input("Step 1: Insert your SD card into your computer"))
+    answer = str(input("Step 2: Copy all files from MSET9.zip to the root of your SD card. If any files already exist, override them."))
+    answer = str(input("Step 3: Run the MSET9 script (MSET9-windows.bat)"))
+    answer = str(input("Step 4: Input the number correspoding with your model of 3ds"))
+    answer = str(input("Step 5: Type 1 to begin the process of creating your MSET9 ID1"))
+    answer = str(input("Step 6: After reviewing the disclaimer, type 1 and hit enter to begin the process"))
+    answer = str(input("Step 7: If you see the message Created Hacked ID1, press Enter to close the MSET9 script"))
 
 guidedisclaimer()
