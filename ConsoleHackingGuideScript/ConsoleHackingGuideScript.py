@@ -3,6 +3,7 @@ import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 # Imports OS library for directory creation
 import os
+
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
     print("Welcome to the console hacking guide! This is a simple python script with instructions for console modding!")
