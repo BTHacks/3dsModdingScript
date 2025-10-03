@@ -2,7 +2,6 @@ This is a combined script for guides hosted by the hacks.guide community. I am n
 
 Requirements:
 python 3.9
-requests library
 
 This program will download files to your computer, all file download sources will be listed below, as well as commented in the source code
 
