@@ -70,6 +70,41 @@ def guide3ds():
     print("")
     print("The guide will now continue")
     print("Before starting this guide, we will check if your system already has CFW installed.")
+    print("CFW CHECK STEPS")
+    print("1. Power off your system")
+    print("2. Hold select while powering on the system")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Does your console boot to the normal home menu? (y/n)"))
+        if answer == "y":
+            print("Your system does not have CFW installed, you may continue with the guide")
+            activeinput = int(0)
+        elif answer == "n":
+            print("Your system may have custom firmware, we will continue to a further check.")
+            guide3dscfwcheck()
+            activeinput = int(0)
+        else:
+            print("Invalid input, try again")
+    print("Before continuing, please make sure your console is on the latest official 3ds firmware")
+    print("Latest firmware: Ver. 11.17.0-50")
+    print("If your system is not on the latest firmware, please update before continuing")
+    answer = str(input("Press any key to continue: "))
+    print("")
+    print("Please enter which type of 3ds system you have")
+    print("1) Old (3ds, 3ds XL/LL, 2ds) 2) New (New 3ds, New 3ds XL/LL, New 2ds XL/LL)")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("System type: "))
+        if answer == "1":
+            print("Continuing with Old 3ds guide")
+            guide3dsold()
+            activeinput = int(0)
+        elif answer == 1:
+            print("Continuing with New 3ds guide")
+            guide3dsnew()
+            activeinput = int(0)
+        else:
+            print("Invalid input, try again.")
 
 
 guidedisclaimer()
