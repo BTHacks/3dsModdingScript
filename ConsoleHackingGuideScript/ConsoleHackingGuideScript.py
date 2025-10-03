@@ -128,6 +128,8 @@ def guide3dsold():
     answer = str(input("Step 4: Input the number correspoding with your model of 3ds"))
     answer = str(input("Step 5: Type 1 to begin the process of creating your MSET9 ID1"))
     answer = str(input("Step 6: After reviewing the disclaimer, type 1 and hit enter to begin the process"))
-    answer = str(input("Step 7: If you see the message Created Hacked ID1, press Enter to close the MSET9 script"))
+    print("Step 7: If you see the message Created Hacked ID1, press Enter to close the MSET9 script")
+    answer = str(input("Note: Your console will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step"))
+    answer = str(input("Step 8: Reinsert your SD card and power on your console"))
 
 guidedisclaimer()
