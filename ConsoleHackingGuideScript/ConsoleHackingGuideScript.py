@@ -132,5 +132,18 @@ def guide3dsold():
     print("Step 7: If you see the message Created Hacked ID1, press Enter to close the MSET9 script")
     answer = str(input("Note: Your console will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step"))
     answer = str(input("Step 8: Reinsert your SD card and power on your console"))
+    answer = str(input("Step 9:Open the Mii maker application"))
+    answer = str(input("Step 10: Wait for your console to reach the Welcome to Mii Maker screen, then exit Mii Maker and return to the HOME menu"))
+    print("Step 11: Launch system settings and navigate to Data management > Nintendo 3DS > Software > reset")
+    answer = str(input("This will NOT wipe any of your data"))
+    answer = str(input("Step 12: Power off your console and insert your SD card back into your computer"))
+    answer = str(input("Step 13: Run the MSET9 script (MSET9-Windows.bat)"))
+    answer = str(input("Step 14: Type the number corresponding with your console model and version, then press enter. You should see the word ready in green text"))
+    answer = str(input("Step 15: Type 0 and press enter to close the script"))
+    answer = str(input("Re insert your SD card into your console"))
+    print("")
+    print("")
+    print("Section II: MSET9")
+
 
 guidedisclaimer()
