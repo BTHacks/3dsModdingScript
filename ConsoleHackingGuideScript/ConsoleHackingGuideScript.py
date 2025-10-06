@@ -173,7 +173,54 @@ def guide3dscfwcheck():
 
 # Function for updating A9LH to B9S
 def guide3dsa9lh2b9s():
-    pass
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    print("Notice: this section of the script cannot be used if you have a New 3ds system (New Nintendo 3ds, New Nintendo 3ds XL/LL, New Nintendo 2ds XL/LL)")
+    print("You will have to go to https://3ds.hacks.guide/a9lh-to-b9s.html if you have one of those systems")
+    print("Enter y below to continue with the guide, only if you do not have one of the above mentioned systems")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Continue?"))
+        if answer == "y":
+            activeinput = int(0)
+        else:
+            print("The program will now close.")
+            quit
+    print("Required files will now download to C:\ConsoleHackingScript\a9lh2b9s")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/a9lh2b9s")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\a9lh2b9s\LumaLatest.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip", "C:\ConsoleHackingScript\a9lh2b9s\LumaOld.zip")
+    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", "C:\ConsoleHackingScript\a9lh2b9s\SafeB9SInstaller.zip")
+    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", "C:\ConsoleHackingScript\a9lh2b9s\boot9strap.zip")
+    print("")
+    print("Section I: Prep Work")
+    print("-For all steps in this section, if any of the files already exist, overwrite them with the new files")
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Insert your SD card into your computer"))
+    answer = str(input("Step 3: Copy everything from LumaLatest.zip to the root of your SD card"))
+    answer = str(input("Step 4: Copy arm9loaderhax.bin from LumaOld.zip to the root of your SD card"))
+    print("Step 5: Copy SafeB9SInstaller.bin from SafeB9SInstaller.zip to /luma/payloads on your SD card")
+    print("-If /luma or /luma/payloads doesn't exist, create them")
+    answer = str(input("-Delete any other .bin payloads in the folder, if they exist"))
+    answer = str(input("Step 6: Create a folder named boot9strap on the root of your SD card"))
+    answer = str(input("Step 7: Copy boot9strap.firm and boot9strap.firm.sha from boot9strap.zip to the /boot9strap folder on your SD card"))
+    answer = str(input("Step 8: Reinsert your SD card into your console"))
+    print("")
+    print("")
+    print("Section II: Installing boot9strap")
+    print("Step 1: Boot your console while holding start to launch SafeB9SInstaller")
+    print("-If you see the Luma config menu, simply press start to restart your console and try again")
+    answer = str(input("-If this gives you an error, backup your files and format the SD card, or try a new one"))
+    answer = str(input("Step 2: Wait for all safety checks to complete"))
+    answer = str(input("Step 3: When prompted, input the key combo given on the top screen to install boot9strap"))
+    answer = str(input("Step 4: Your console should have booted into the Luma Config menu"))
+    answer = str(input("Step 5: Press start to save and reboot"))
+    guide3dsfinalsetup()
 
 # Function for updating B9S
 def guide3dsupdateb9s():
