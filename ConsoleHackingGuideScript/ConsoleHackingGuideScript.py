@@ -478,6 +478,19 @@ def guide3dsfinalsetup():
         print("")
         loopvar = loopvar - 1
     print("Required Reading")
-    print("In the previous section")
+    print("In the previous section, you installed boot9strap, a custom firmware loader that loads the file boot.firm from SD card or NAND (internal memory). In this case, we are using Luma3DS by LumaTeam as our boot.firm to patch the console, allowing it to run homebrew software.")
+    print("In this section, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that will run on your console")
+    print("")
+    print("The script will install the following applications:")
+    print("-FBI by Steveice10 (Installs CIA formatted applications)")
+    print("-Homebrew Launcher Loader by PabloMK7 (runs HomebrewLauncher, for 3DSX format homebrew)")
+    print("-Anemone3DS by astronautlevel2 (Installs custom themes, splashes, and badges)")
+    print("-Checkpoint by BernardoGiordano/FlagBrew (manages 3DS/DS game save data)")
+    print("-ftpd by mtheall (allows wireless 3DS SD card access over FTP)")
+    print("-Universal-Updater by Universal-Team (on-device app store for downloading homebrew over Wi-Fi)")
+    print("-GodMode9 by d0k3 (multipurpose tool for extracting data from internal memory or cartridges)")
+    print("")
+    answer = str(input("Source code for all of these will be on the readme for this script"))
+
 
 guidedisclaimer()
