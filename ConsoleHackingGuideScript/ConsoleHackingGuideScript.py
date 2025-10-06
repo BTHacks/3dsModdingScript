@@ -3,7 +3,6 @@ import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 # Imports OS library for directory creation
 import os
-import urllib.request
 # Directory creation usage:
 # try:
 #   os.makedirs("directorypath")
@@ -474,6 +473,11 @@ def guide3dssuperskaterhax():
 
 # Function for the finalize setup section of the guide
 def guide3dsfinalsetup():
-    pass
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    print("Required Reading")
+    print("In the previous section")
 
 guidedisclaimer()
