@@ -3,6 +3,7 @@ import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 # Imports OS library for directory creation
 import os
+import urllib.request
 # Directory creation usage:
 # try:
 #   os.makedirs("directorypath")
@@ -106,11 +107,11 @@ def guide3ds():
         answer = str(input("System type: "))
         if answer == "1":
             print("Continuing with Old 3ds guide")
-            guide3dsold()
+            guide3dsmset9()
             activeinput = int(0)
         elif answer == "2":
             print("Continuing with New 3ds guide")
-            guide3dsnew()
+            guide3dssuperskaterhax()
             activeinput = int(0)
         else:
             print("Invalid input, try again.")
@@ -287,20 +288,20 @@ def guide3dsupdateorrestorecfw():
     answer = str(input("Step 4: Power on your console"))
     guide3dsfinalsetup()
 
-# Functon for the "Old 3ds" section of the guide
-def guide3dsold():
+# Functon for the "MSET9" section of the guide
+def guide3dsmset9():
     loopvar = int(50)
     while loopvar >= 1:
         print("")
         loopvar = loopvar - 1
     print("Old 3DS Homebrew installation")
     print("We will now install CFW on your system using the MSET9 method")
-    print("Any required files will be downloaded to C:\ConsoleHackingScript\phaseone")
+    print("Any required files will be downloaded to C:\ConsoleHackingScript\mset9")
     try:
-        os.makedirs("C:/ConsoleHackingScript/phaseone/ ")
+        os.makedirs("C:/ConsoleHackingScript/mset9/ ")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\phaseone\MSET9-v2.1.zip")
+    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\mset9\MSET9-v2.1.zip")
     print("")
     print("Section I: Prep work") # Instructions in sections will use input check functions rather than print functions so you can stop and read each step. This is not a mistake, but an intended function
     print("")
@@ -378,9 +379,98 @@ def guide3dsold():
     answer = str(input("In the next section, you will install useful homebrew applications to complete your setup"))
     guide3dsfinalsetup()
 
-# Function for the "New 3ds" Section of the guide
-def guide3dsnew():
-    pass
+# Function for the "super-skaterhax" Section of the guide
+def guide3dssuperskaterhax():
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    print("Note: this guide takes less time, but is known to be inconsistent. If you wish to use a more consistent exploit, type n below to be rerouted to the MSET9 section")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Do you wish to continue? (y/n) "))
+        if answer == "y":
+            activeinput = int(0)
+        elif answer == "n":
+            guide3dsmset9()
+            activeinput = int(0)
+        else:
+            print("Invalid input, try again")
+    print("")
+    print("Compatibility notes:")
+    answer = str(input("This exploit, known as super-skaterhax, is compatible with New models on version 11.15.0 and above in all regions"))
+    print("Needed files will now be downloaded to C:\ConsoleHackingScript\superskaterhax")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/superskaterhax")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/zoogie/super-skaterhax/releases/download/v1.1/release_new3ds_v1.1.zip", "C:\ConsoleHackingScript\superskaterhax\skaterhax.zip")
+    print("")
+    print("Section I: Prep work")
+    answer = str(input("In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher"))
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Insert your SD card into your computer"))
+    answer = str(input("Step 3: Extract skaterhax.zip, and open the folder with your region and version number"))
+    answer = str(input("Step 4: Copy everything from that folder onto the root of your SD card"))
+    answer = str(input("Step 5: Reinsert your SD card into your console and power it on"))
+    answer = str(input("Step 6: Launch system settings"))
+    answer = str(input("Step 7: Select 'other settings'"))
+    answer = str(input("Step 8: Navigate to profile > region settings"))
+    answer = str(input("Step 9: Select your region, then select Do Not Set"))
+    answer = str(input("Step 10: Navigate to 'Date & Time'"))
+    answer = str(input("Step 11: Set the date and time to your current date and time"))
+    answer = str(input("Step 12: Exit system settings"))
+    print("")
+    print("Section II: super-skaterhax")
+    answer = str(input("In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher"))
+    print("")
+    answer = str(input("Step 1: Open the internet browser"))
+    answer = str(input("Step 2: Tap the 3-line menu in the bottom right corner of the screen"))
+    answer = str(input("Step 3: tap settings, scroll down, then reset save data > clear all > clear > ok"))
+    answer = str(input("Step 4: Reopen the web browser"))
+    answer = str(input("Step 5: tap next > google > ok > ok"))
+    answer = str(input("Step 6: tap the address bar on the bottom screen"))
+    print("Step 7: Enter the URL corresponding to your console's region")
+    print("-USA/EUR/JPN: https://skater.686178.xyz/go/super")
+    answer = str(input("-KOR: https://skater.686178.xyz/go/korea"))
+    print("Step 8: Tap 'open'")
+    answer = str(input("-You should see the text 'GO! GO!' Do not click it yet"))
+    answer = str(input("Step 9: Open the 3-line menu on the bottom-right corner of the screen"))
+    answer = str(input("Step 10: Tap on 'Add to bookmarks'"))
+    answer = str(input("Step 11: Tap on the 3-line menu again"))
+    answer = str(input("Step 12: Tap on settings > delete cookies > yes"))
+    answer = str(input("Step 13: Press home to return to the home menu, then immediately reopen the internet browser"))
+    answer = str(input("Step 14: Wait for the page to fully load, then tap the 'GO! GO!' button on the top of the bottom screen"))
+    answer = str(input("Step 15: Wait for the page to fully load, then press A to dismiss the popup"))
+    print("Step 16: If your console displays:")
+    print("-'The Homebrew Launcher' screen: Continue to the next step")
+    print("-A white 'error has occurred' message box: The exploit has failed due to random chance. Open system settings, change language (if possible), close system settings, then retry the steps in this section")
+    print("--On JPN/KOR region consoles, there is only one language setting. On those consoles, open then close system settings, then retry this section")
+    print("--If the exploit is still unsuccessful after 5 attempts, there may be a problem with your files or prep work. Ensure region and date and time are correct, and that you have been following this section EXACTLY")
+    print("--If the exploit is still unsuccessful after 10 steps, input 1 on the next prompt in this script to be redirected to MSET9")
+    print("-A black screen that says 'an error has occurred': Your file placement is incorrect. Ensure the files are on the root of the SD card")
+    print("-A yellow screen: The Homebrew Launcher failed to open due to random chance. Hold the power button to force shut off the console, then retry this section")
+    print("-The word 'text': You have an old 3ds. This exploit will not work on the old 3ds. Type 1 in the prompt in this script to be redirected to MSET9")
+    answer = str(input("Prompt: "))
+    if answer == "1":
+        guide3dsmset9()
+    answer = str(input("Step 17: Launch nimdsphax from the list of homebrew"))
+    print("Step 18: If the exploit was successful, you will have booted into safeB9Sinstaller")
+    answer = str(input("-If your console freezes on a red or green screen, hold the power button to shut off the console, then retry this section"))
+    print("")
+    print("Section III: Installing boot9strap")
+    answer = str(input("In this section, you will install custom firmware onto your console"))
+    answer = str(input("Step 1: When prompted, input the key combo given on the top screen to install boot9strap"))
+    answer = str(input("Step 2: Once it is complete, press A to reboot your console"))
+    print("Step 3: Your console should have booted into the Luma3DS configuration menu")
+    answer = str(input("-Do not change any settings!"))
+    answer = str(input("Step 4: Press start to save and reboot"))
+    print("")
+    print("At this point, your console will boot to Luma3DS by default")
+    print("-Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware")
+    answer = str(input("-In the next section, you will install useful homebrew applications to complete your setup"))
+    guide3dsfinalsetup()
+
 
 # Function for the finalize setup section of the guide
 def guide3dsfinalsetup():
