@@ -470,7 +470,6 @@ def guide3dssuperskaterhax():
     answer = str(input("-In the next section, you will install useful homebrew applications to complete your setup"))
     guide3dsfinalsetup()
 
-
 # Function for the finalize setup section of the guide
 def guide3dsfinalsetup():
     loopvar = int(50)
@@ -491,6 +490,77 @@ def guide3dsfinalsetup():
     print("-GodMode9 by d0k3 (multipurpose tool for extracting data from internal memory or cartridges)")
     print("")
     answer = str(input("Source code for all of these will be on the readme for this script"))
+    print("All needed files will be downloaded to C:\ConsoleHackingScript\3dsfinal")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/3dsfinal")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", "C:\ConsoleHackingScript\3dsfinal\x_finalize_helper.firm")
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", "C:\ConsoleHackingScript\3dsfinal\finalize.romfs")
+    print("")
+    print("Section I: Prep work")
+    answer = str(input("In this section, you will copy the files necessary to follow the rest of the instructions on this secion"))
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Insert your SD card into your computer"))
+    answer = str(input("Step 3: Copy finalize.romfs to the root of the SD card"))
+    answer = str(input("Step 4: Open the luma folder on your SD card and create a folder named payloads inside, if it does not already exist"))
+    answer = str(input("Step 5: Copy x_finalize_helper.firm to the payloads folder"))
+    answer = str(input("Step 6: Reinsert your SD card into your console"))
+    print("")
+    print("Section II: Updating the system")
+    answer = str(input("In this section, you will update your system to the latest version, which is safe to do with custom firmware"))
+    print("Step 1: Update your console by going into System Settings, then Other Settings, then all the way to the right and using 'system update'")
+    print("-Updates while using B9S + Luma (what you have) are safe")
+    print("-The updater may display a message saying 'Your system is up to date' instead of updating. This is normal if you are already up to date, continue to the next section")
+    answer = str(input("-If this gives you an error, set your DNS settings to auto and your proxy settings to no"))
+    print("")
+    print("Section III: RTC and DSP setup")
+    answer = str(input("In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware."))
+    answer = str(input("Step 1: press L + D-Pad down + select at the same time to open the rosalina menu"))
+    answer = str(input("Step 2: Select 'Miscellaneous options"))
+    answer = str(input("Step 3: Select 'Dump DSP Firmware'"))
+    answer = str(input("Step 4: Press B to continue"))
+    answer = str(input("Step 5: Select 'Nullify user time offset'"))
+    answer = str(input("Step 6: Press B to continue"))
+    answer = str(input("Step 7: Press B to return to the Rosalina main menu"))
+    answer = str(input("Step 8: Press B to exit the Rosalina menu"))
+    print("")
+    print("Section IV: Setup script")
+    answer = str(input("In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup"))
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Press and hold X, and while holding X, power on your console. This will launch the finalizing setup helper"))
+    answer = str(input("Step 3: If the helper was successful, your console will boot into GodMode9"))
+    answer = str(input("Step 4: If you are prompted to create an essentia files backup, press A to do so, then press A to continue once it has completed"))
+    answer = str(input("Step 5: If you are prompted to fix the RTC date&time, press A to do so, then set the date and time, then press A to continue"))
+    answer = str(input("Step 6: Press home to bring up the action menu"))
+    answer = str(input("Step 7: Select 'scripts...'"))
+    answer = str(input("Step 8: Select 'finalize'"))
+    answer = str(input("Step 9: Follow the prompts in the script, answering any questions that you are asked"))
+    print("Step 10: Once the script says 'setup complete!', press A to power off the device")
+    answer = str(input("-If you do NOT see the message 'Setup complete!', the script was not successful and you will need to redo this section from step 3"))
+    answer = str(input("Step 11: Insert your SD card into your computer"))
+    print("Step 12: Copy the /gm9/backups folder to a safe location on your computer")
+    print("-This folder contains critical file backups and should be backed up to multiple location if possible")
+    print("-The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue")
+    answer = str(input("-The essential.exefs file contains your console's system unique files and can be used to recover your data in the event of a hardware failure"))
+    print("Step 13: If you still have them, delete the two SysNAND files from the /gm9/backups folder from your SD card")
+    answer = str(input("-The essential.exefs file is small and may be kept on your SD Card for ease of access"))
+    print("")
+    print("Congrats, you're done! You now have a fully modded Nintendo 3ds!!")
+    answer = str(input("Press any key to close this script"))
+    quit
 
+# Function to run the Wii section of the guide
+def guidewii():
+    pass
 
+# Function to run the Wii U section of the guide
+def guidewiiu():
+    pass
+
+# Function to run the PlayStation Vita section of the guide
+def guidevita():
+    pass
+
+# The single line of code ran at execution. This chains into all the rest of the script
 guidedisclaimer()
