@@ -224,7 +224,44 @@ def guide3dsa9lh2b9s():
 
 # Function for updating B9S
 def guide3dsupdateb9s():
-    pass
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar + 1
+    print("Required Reading")
+    answer = str(input("This section is for existing boot9strap users to update their installation of boot9strap to the latest version"))
+    print("Required files will be downloaded to C:\ConsoleHackingScript\updateb9s")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/updateb9s")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", "C:\ConsoleHackingScript\updateb9s\SafeB9SInstaller.zip")
+    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", "C:\ConsoleHackingScript\updateb9s\boot9strap.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\updateb9s\LumaLatest.zip")
+    print("")
+    print("Section I: Prep work")
+    answer = str(input("For all steps in this section, overwrite any existing files on your SD card."))
+    answer = str(input("Step 1: Insert your SD Card into your computer"))
+    answer = str(input("Step 2: Create a folder named boot9strap on the root of the SD Card"))
+    answer = str(input("Step 3: Copy boot9strap.firm and boot9strap.firm.sha from boot9strap.zip to the boot9strap folder on your SD Card"))
+    answer = str(input("Step 4: Copy SafeB9SInstaller.firm from SafeB9SInstaller.zip to the root of your SD Card, rename it to boot.firm"))
+    answer = str(input("Step 5: Reinsert your SD Card into your console"))
+    print("")
+    print("Section II: Installing boot9strap")
+    print("Step 1: Power on your console")
+    answer = str(input("-This should automatically launch SafeB9SInstaller"))
+    answer = str(input("Step 2: When prompted, input the key combo given on the top screen to install boot9strap"))
+    print("Step 3: Once completed, force your console off by holding down the power button")
+    answer = str(input("-Until the next section is complete, the console will only boot SafeB9SInstaller"))
+    print("")
+    print("Section III: Update Luma3DS")
+    answer = str(input("Step 1: Insert your SD card into your computer"))
+    answer = str(input("Step 2: Copy everything from LumaLatest.zip to the root of the SD Card, replacing any existing files"))
+    answer = str(input("Step 3: Reinsert your SD Card into your console"))
+    answer = str(input("Step 4: Power on your console"))
+    print("Step 5: If your console has booted into the Luma3DS configuration menu, press start to save and reboot")
+    answer = str(input("-Don't change any settings"))
+    guide3dsfinalsetup()
 
 # Function for restoring and updating CFW
 def guide3dsupdateorrestorecfw():
