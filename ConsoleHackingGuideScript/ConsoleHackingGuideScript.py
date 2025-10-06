@@ -9,6 +9,14 @@ import os
 # except FileExistsError
 #   pass
 
+# Simple few lines of code for a screen refresh
+def screenrefresh(x):
+    loopvar = int(x)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    pass
+
 # Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it
 def startup():
     print("######################################################################")
@@ -590,7 +598,8 @@ def guide3dsfinalsetup():
 
 # Function to run the Wii section of the guide
 def guidewii():
-    pass
+    screenrefresh(50)
+
 
 # Function to run the Wii U section of the guide
 def guidewiiu():
