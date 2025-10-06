@@ -108,7 +108,7 @@ def guide3ds():
             print("Continuing with Old 3ds guide")
             guide3dsold()
             activeinput = int(0)
-        elif answer == 1:
+        elif answer == "2":
             print("Continuing with New 3ds guide")
             guide3dsnew()
             activeinput = int(0)
@@ -118,6 +118,69 @@ def guide3ds():
 
 # Function for the custom firmware check of the initial guide
 def guide3dscfwcheck():
+    loopvar = int(50)
+    while loopvar >= 50:
+        print("")
+        loopvar = loopvar - 1
+    print("Required reading")
+    print("This is an add-on section to check if your console already has a modern custom firmware")
+    print("If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one")
+    print("")
+    print("Instructions:")
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Hold the select button"))
+    answer = str(input("Step 3: Power on your console while still holding the select button"))
+    answer = str(input("Step 4: You should now see a configuration menu of some sort"))
+    print("")
+    print("What happened?")
+    print("1. Console just booted to the home menu")
+    print("2. A config menu popped up")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Input:"))
+        if answer == "1":
+            print("You do not have custom firmware, returning to the beginning of the guide")
+            guide3ds()
+            activeinput = int(0)
+        elif answer == "2":
+            activeinput = int(0)
+            pass
+        else:
+            print("Invalid input, please try again")
+    print("")
+    print("You should see a version of Luma3DS on the screen.")
+    print("1. Version 7.0.5 or lower")
+    print("2. Version 7.1")
+    print("3. Version 8.0 or newer")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Please enter the number corresponding with the version shown"))
+        if answer == "1":
+            print("Continuing to the section of updating A9LH to B9S")
+            guide3dsa9lh2b9s()
+            activeinput = int(0)
+        elif answer == "2":
+            print("Continuing to updating B9S")
+            guide3dsupdateb9s()
+            activeinput = int(0)
+        elif answer == "3":
+            print("Continuing to restoring/updating CFW")
+            guide3dsupdateorrestorecfw()
+            activeinput = int(0)
+        else:
+            print("Invalid input, please try again")
+    pass
+
+# Function for updating A9LH to B9S
+def guide3dsa9lh2b9s():
+    pass
+
+# Function for updating B9S
+def guide3dsupdateb9s():
+    pass
+
+# Function for restoring and updating CFW
+def guide3dsupdateorrestorecfw():
     pass
 
 # Functon for the "Old 3ds" section of the guide
