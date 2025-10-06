@@ -57,6 +57,7 @@ def startup():
 
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
+    print("")
     print("Welcome to the console hacking guide! This is a simple python script with instructions for console modding!")
     print("Note: All resources are from the website https://hacks.guide")
     print("I claim no ownership over the guide, troubleshooting steps, or any information provided.")
@@ -74,10 +75,7 @@ def guidedisclaimer():
 
 # Guide selection script, can be called after disclaimer, upon guide completion, or if a certain input is chosen within other sections
 def guidecontinue():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Please select what guide you would like")
     print("Available guides:")
     print("1) 3ds 2) Wii 3) Wii U 4) Playstation Vita")
@@ -102,10 +100,7 @@ def guidecontinue():
 
 # Function to run the 3ds section of the guide
 def guide3ds():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Welcome to the Nintendo 3ds homebrew guide. We will begin by going over key information.")
     answer = str(input("Press any key to continue"))
     print("")
@@ -164,10 +159,7 @@ def guide3ds():
 
 # Function for the custom firmware check of the initial guide
 def guide3dscfwcheck():
-    loopvar = int(50)
-    while loopvar >= 50:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Required reading")
     print("This is an add-on section to check if your console already has a modern custom firmware")
     print("If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one")
@@ -219,10 +211,7 @@ def guide3dscfwcheck():
 
 # Function for updating A9LH to B9S
 def guide3dsa9lh2b9s():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Updating A9LH to B9S")
     print("Notice: this section of the script cannot be used if you have a New 3ds system (New Nintendo 3ds, New Nintendo 3ds XL/LL, New Nintendo 2ds XL/LL)")
     print("You will have to go to https://3ds.hacks.guide/a9lh-to-b9s.html if you have one of those systems")
@@ -271,10 +260,7 @@ def guide3dsa9lh2b9s():
 
 # Function for updating B9S
 def guide3dsupdateb9s():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar + 1
+    screenrefresh(50)
     print("Updating boot9strap")
     print("Required Reading")
     answer = str(input("This section is for existing boot9strap users to update their installation of boot9strap to the latest version"))
@@ -313,10 +299,7 @@ def guide3dsupdateb9s():
 
 # Function for restoring and updating CFW
 def guide3dsupdateorrestorecfw():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Restoring / updating CFW")
     print("Required reading:")
     print("This sections prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD Card")
@@ -335,11 +318,8 @@ def guide3dsupdateorrestorecfw():
 
 # Functon for the "MSET9" section of the guide
 def guide3dsmset9():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
-    print("Old 3DS Homebrew installation")
+    screenrefresh(50)
+    print("MSET9-based Homebrew installation")
     print("We will now install CFW on your system using the MSET9 method")
     print(r"Any required files will be downloaded to C:\ConsoleHackingScript\mset9")
     try:
@@ -426,10 +406,8 @@ def guide3dsmset9():
 
 # Function for the "super-skaterhax" Section of the guide
 def guide3dssuperskaterhax():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
+    print("super-skaterhax based homebrew installation")
     print("Note: this guide takes less time, but is known to be inconsistent. If you wish to use a more consistent exploit, type n below to be rerouted to the MSET9 section")
     activeinput = int(1)
     while activeinput == 1:
@@ -518,10 +496,7 @@ def guide3dssuperskaterhax():
 
 # Function for the finalize setup section of the guide
 def guide3dsfinalsetup():
-    loopvar = int(50)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
+    screenrefresh(50)
     print("Required Reading")
     print("In the previous section, you installed boot9strap, a custom firmware loader that loads the file boot.firm from SD card or NAND (internal memory). In this case, we are using Luma3DS by LumaTeam as our boot.firm to patch the console, allowing it to run homebrew software.")
     print("In this section, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that will run on your console")
