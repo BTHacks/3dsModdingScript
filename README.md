@@ -45,3 +45,5 @@ ftpd program: https://github.com/mtheall/ftpd
 Universal-Updater program: https://github.com/Universal-Team/Universal-Updater/
 
 GodMode9 firmware: https://github.com/d0k3/GodMode9
+
+Finalization scripts: https://github.com/hacks-guide/finalize/
