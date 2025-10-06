@@ -177,6 +177,7 @@ def guide3dsa9lh2b9s():
     while loopvar >= 1:
         print("")
         loopvar = loopvar - 1
+    print("Updating A9LH to B9S")
     print("Notice: this section of the script cannot be used if you have a New 3ds system (New Nintendo 3ds, New Nintendo 3ds XL/LL, New Nintendo 2ds XL/LL)")
     print("You will have to go to https://3ds.hacks.guide/a9lh-to-b9s.html if you have one of those systems")
     print("Enter y below to continue with the guide, only if you do not have one of the above mentioned systems")
@@ -228,6 +229,7 @@ def guide3dsupdateb9s():
     while loopvar >= 1:
         print("")
         loopvar = loopvar + 1
+    print("Updating boot9strap")
     print("Required Reading")
     answer = str(input("This section is for existing boot9strap users to update their installation of boot9strap to the latest version"))
     print("Required files will be downloaded to C:\ConsoleHackingScript\updateb9s")
@@ -265,7 +267,25 @@ def guide3dsupdateb9s():
 
 # Function for restoring and updating CFW
 def guide3dsupdateorrestorecfw():
-    pass
+    loopvar = int(50)
+    while loopvar >= 1:
+        print("")
+        loopvar = loopvar - 1
+    print("Restoring / updating CFW")
+    print("Required reading:")
+    print("This sections prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD Card")
+    answer = str(input("Your SD card must be formatted as Fat32"))
+    print("The script will now download needed files to C:\ConsoleHackingScript\updatecfw")
+    try:
+        os.makedirs("C:/ConsoleHackingScript/updatecfw/")
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\updatecfw\LumaLatest.zip")
+    answer = str(input("Step 1: Insert your SD card into your computer"))
+    answer = str(input("Step 2: Copy everything from LumaLatest.zip to the root of your SD card. If any of these files exist, overwrite them"))
+    answer = str(input("Step 3: Reinsert your SD Card int your console"))
+    answer = str(input("Step 4: Power on your console"))
+    guide3dsfinalsetup()
 
 # Functon for the "Old 3ds" section of the guide
 def guide3dsold():
@@ -273,6 +293,7 @@ def guide3dsold():
     while loopvar >= 1:
         print("")
         loopvar = loopvar - 1
+    print("Old 3DS Homebrew installation")
     print("We will now install CFW on your system using the MSET9 method")
     print("Any required files will be downloaded to C:\ConsoleHackingScript\phaseone")
     try:
