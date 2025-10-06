@@ -9,6 +9,44 @@ import os
 # except FileExistsError
 #   pass
 
+# Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it
+def startup():
+    print("######################################################################")
+    print("  /$$$$$$                                          /$$                ")
+    print(" /$$__  $$                                        | $$                ")
+    print("| $$  \__/  /$$$$$$  /$$$$$$$   /$$$$$$$  /$$$$$$ | $$  /$$$$$$       ")
+    print("| $$       /$$__  $$| $$__  $$ /$$_____/ /$$__  $$| $$ /$$__  $$      ")
+    print("| $$      | $$  \ $$| $$  \ $$|  $$$$$$ | $$  \ $$| $$| $$$$$$$$      ")
+    print("| $$    $$| $$  | $$| $$  | $$ \____  $$| $$  | $$| $$| $$_____/      ")
+    print("|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/|  $$$$$$/| $$|  $$$$$$$      ")
+    print(" \______/  \______/ |__/  |__/|_______/  \______/ |__/ \_______/      ")
+    print("")
+    print(" /$$   /$$                     /$$       /$$                          ")
+    print("| $$  | $$                    | $$      |__/                          ")
+    print("| $$  | $$  /$$$$$$   /$$$$$$$| $$   /$$ /$$ /$$$$$$$   /$$$$$$       ")
+    print("| $$$$$$$$ |____  $$ /$$_____/| $$  /$$/| $$| $$__  $$ /$$__  $$      ")
+    print("| $$__  $$  /$$$$$$$| $$      | $$$$$$/ | $$| $$  \ $$| $$  \ $$      ")
+    print("| $$  | $$ /$$__  $$| $$      | $$_  $$ | $$| $$  | $$| $$  | $$      ")
+    print("| $$  | $$|  $$$$$$$|  $$$$$$$| $$ \  $$| $$| $$  | $$|  $$$$$$$      ")
+    print("|__/  |__/ \_______/ \_______/|__/  \__/|__/|__/  |__/ \____  $$      ")
+    print("                                                       /$$  \ $$      ")
+    print("                                                      |  $$$$$$/      ")
+    print("                                                       \______/       ")
+    print("  /$$$$$$                      /$$             /$$                    ")
+    print(" /$$__  $$                    |__/            | $$                    ")
+    print("| $$  \__/  /$$$$$$$  /$$$$$$  /$$  /$$$$$$  /$$$$$$                  ")
+    print("|  $$$$$$  /$$_____/ /$$__  $$| $$ /$$__  $$|_  $$_/                  ")
+    print(" \____  $$| $$      | $$  \__/| $$| $$  \ $$  | $$                    ")
+    print(" /$$  \ $$| $$      | $$      | $$| $$  | $$  | $$ /$$                ")
+    print("|  $$$$$$/|  $$$$$$$| $$      | $$| $$$$$$$/  |  $$$$/                ")
+    print(" \______/  \_______/|__/      |__/| $$____/    \___/                  ")
+    print("                                  | $$                                ")
+    print("                                  | $$                                ")
+    print("                                  |__/                                ")
+    print("######################################################################")
+    print("")
+    guidedisclaimer()
+
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
     print("Welcome to the console hacking guide! This is a simple python script with instructions for console modding!")
@@ -189,15 +227,15 @@ def guide3dsa9lh2b9s():
         else:
             print("The program will now close.")
             quit
-    print("Required files will now download to C:\ConsoleHackingScript\a9lh2b9s")
+    print(r"Required files will now download to C:\ConsoleHackingScript\a9lh2b9s")
     try:
         os.makedirs("C:/ConsoleHackingScript/a9lh2b9s")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\a9lh2b9s\LumaLatest.zip")
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip", "C:\ConsoleHackingScript\a9lh2b9s\LumaOld.zip")
-    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", "C:\ConsoleHackingScript\a9lh2b9s\SafeB9SInstaller.zip")
-    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", "C:\ConsoleHackingScript\a9lh2b9s\boot9strap.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaLatest.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaOld.zip")
+    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", r"C:\ConsoleHackingScript\a9lh2b9s\SafeB9SInstaller.zip")
+    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", r"C:\ConsoleHackingScript\a9lh2b9s\boot9strap.zip")
     print("")
     print("Section I: Prep Work")
     print("-For all steps in this section, if any of the files already exist, overwrite them with the new files")
@@ -232,14 +270,14 @@ def guide3dsupdateb9s():
     print("Updating boot9strap")
     print("Required Reading")
     answer = str(input("This section is for existing boot9strap users to update their installation of boot9strap to the latest version"))
-    print("Required files will be downloaded to C:\ConsoleHackingScript\updateb9s")
+    print(r"Required files will be downloaded to C:\ConsoleHackingScript\updateb9s")
     try:
         os.makedirs("C:/ConsoleHackingScript/updateb9s")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", "C:\ConsoleHackingScript\updateb9s\SafeB9SInstaller.zip")
-    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", "C:\ConsoleHackingScript\updateb9s\boot9strap.zip")
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\updateb9s\LumaLatest.zip")
+    urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", r"C:\ConsoleHackingScript\updateb9s\SafeB9SInstaller.zip")
+    urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", r"C:\ConsoleHackingScript\updateb9s\boot9strap.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", r"C:\ConsoleHackingScript\updateb9s\LumaLatest.zip")
     print("")
     print("Section I: Prep work")
     answer = str(input("For all steps in this section, overwrite any existing files on your SD card."))
@@ -275,12 +313,12 @@ def guide3dsupdateorrestorecfw():
     print("Required reading:")
     print("This sections prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD Card")
     answer = str(input("Your SD card must be formatted as Fat32"))
-    print("The script will now download needed files to C:\ConsoleHackingScript\updatecfw")
+    print(r"The script will now download needed files to C:\ConsoleHackingScript\updatecfw")
     try:
         os.makedirs("C:/ConsoleHackingScript/updatecfw/")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", "C:\ConsoleHackingScript\updatecfw\LumaLatest.zip")
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", r"C:\ConsoleHackingScript\updatecfw\LumaLatest.zip")
     answer = str(input("Step 1: Insert your SD card into your computer"))
     answer = str(input("Step 2: Copy everything from LumaLatest.zip to the root of your SD card. If any of these files exist, overwrite them"))
     answer = str(input("Step 3: Reinsert your SD Card int your console"))
@@ -295,12 +333,12 @@ def guide3dsmset9():
         loopvar = loopvar - 1
     print("Old 3DS Homebrew installation")
     print("We will now install CFW on your system using the MSET9 method")
-    print("Any required files will be downloaded to C:\ConsoleHackingScript\mset9")
+    print(r"Any required files will be downloaded to C:\ConsoleHackingScript\mset9")
     try:
         os.makedirs("C:/ConsoleHackingScript/mset9/ ")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\mset9\MSET9-v2.1.zip")
+    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", r"C:\ConsoleHackingScript\mset9\MSET9-v2.1.zip")
     print("")
     print("Section I: Prep work") # Instructions in sections will use input check functions rather than print functions so you can stop and read each step. This is not a mistake, but an intended function
     print("")
@@ -398,12 +436,12 @@ def guide3dssuperskaterhax():
     print("")
     print("Compatibility notes:")
     answer = str(input("This exploit, known as super-skaterhax, is compatible with New models on version 11.15.0 and above in all regions"))
-    print("Needed files will now be downloaded to C:\ConsoleHackingScript\superskaterhax")
+    print(r"Needed files will now be downloaded to C:\ConsoleHackingScript\superskaterhax")
     try:
         os.makedirs("C:/ConsoleHackingScript/superskaterhax")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/zoogie/super-skaterhax/releases/download/v1.1/release_new3ds_v1.1.zip", "C:\ConsoleHackingScript\superskaterhax\skaterhax.zip")
+    urllib.request.urlretrieve("https://github.com/zoogie/super-skaterhax/releases/download/v1.1/release_new3ds_v1.1.zip", r"C:\ConsoleHackingScript\superskaterhax\skaterhax.zip")
     print("")
     print("Section I: Prep work")
     answer = str(input("In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher"))
@@ -490,13 +528,13 @@ def guide3dsfinalsetup():
     print("-GodMode9 by d0k3 (multipurpose tool for extracting data from internal memory or cartridges)")
     print("")
     answer = str(input("Source code for all of these will be on the readme for this script"))
-    print("All needed files will be downloaded to C:\ConsoleHackingScript\3dsfinal")
+    print(r"All needed files will be downloaded to C:\ConsoleHackingScript\3dsfinal")
     try:
         os.makedirs("C:/ConsoleHackingScript/3dsfinal")
     except FileExistsError:
         pass
-    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", "C:\ConsoleHackingScript\3dsfinal\x_finalize_helper.firm")
-    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", "C:\ConsoleHackingScript\3dsfinal\finalize.romfs")
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", r"C:\ConsoleHackingScript\3dsfinal\x_finalize_helper.firm")
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", r"C:\ConsoleHackingScript\3dsfinal\finalize.romfs")
     print("")
     print("Section I: Prep work")
     answer = str(input("In this section, you will copy the files necessary to follow the rest of the instructions on this secion"))
@@ -563,4 +601,4 @@ def guidevita():
     pass
 
 # The single line of code ran at execution. This chains into all the rest of the script
-guidedisclaimer()
+startup()
