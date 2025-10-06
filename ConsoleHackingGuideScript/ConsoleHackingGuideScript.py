@@ -24,6 +24,7 @@ def guidedisclaimer():
         guidecontinue()
     else:
         print("The program will now close.")
+    pass
 
 # Guide selection script, can be called after disclaimer, upon guide completion, or if a certain input is chosen within other sections
 def guidecontinue():
@@ -51,6 +52,7 @@ def guidecontinue():
             activeinput = int(0)
         else:
             print("Invalid input, try again")
+    pass
 
 # Function to run the 3ds section of the guide
 def guide3ds():
@@ -112,6 +114,11 @@ def guide3ds():
             activeinput = int(0)
         else:
             print("Invalid input, try again.")
+    pass
+
+# Function for the custom firmware check of the initial guide
+def guide3dscfwcheck():
+    pass
 
 # Functon for the "Old 3ds" section of the guide
 def guide3dsold():
@@ -128,6 +135,7 @@ def guide3dsold():
     urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", "C:\ConsoleHackingScript\phaseone\MSET9-v2.1.zip")
     print("")
     print("Section I: Prep work") # Instructions in sections will use input check functions rather than print functions so you can stop and read each step. This is not a mistake, but an intended function
+    print("")
     answer = str(input("Step 1: Insert your SD card into your computer"))
     answer = str(input("Step 2: Copy all files from MSET9.zip to the root of your SD card. If any files already exist, override them."))
     answer = str(input("Step 3: Run the MSET9 script (MSET9-windows.bat)"))
@@ -151,6 +159,7 @@ def guide3dsold():
     print("Section II: MSET9")
     print("In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer)")
     answer = str(input("These instructions must be followed EXACTLY, so double check EVERYTHING you are doing to avoid errors!"))
+    print("")
     print("Step 1: Power on your console, ensuring System Settings is selected")
     answer = str(input("-If System Settings is not selected, hover over the System Settings icon using the D-Pad, power your console off, then back on"))
     answer = str(input("Step 2: Press (A) to launch system settings"))
@@ -169,6 +178,7 @@ def guide3dsold():
     print("")
     print("")
     print("Section III: Installing boot9strap")
+    print("")
     answer = str(input("In this section, you will install custom firmware onto your console"))
     print("Step 1: When prompted, input the key combo given on the top screen to install boot9strap")
     print("-If the top screen is blank and you see 'Crypto Status - all checks passed' on the bottom screen, you will have to input the key combo blindly. Press the following buttons on your console in the given order")
@@ -180,6 +190,32 @@ def guide3dsold():
     answer = str(input("Step 4: Press start to save and reboot"))
     print("")
     print("")
+    print("Section IV: Removing MSET9")
+    print("In this section, you will remove MSET9 to prevent further issues and to restore your user data. This will not remove the custom firmware just installed")
+    answer = str(input("DO NOT SKIP THIS SECTION!!! IF YOU SKIP IT, YOU WILL ENCOUNTER MANY ISSUES"))
+    print("")
+    answer = str(input("Step 1: Power off your console"))
+    answer = str(input("Step 2: Insert your SD card into your computer"))
+    answer = str(input("Step 3: Run the MSET9 script (MSET9-Windows.bat"))
+    print("Step 4: Type the number corresponding to your console model and version, then press enter")
+    answer = str(input("-The current state should display infected"))
+    print("Step 5: Type 4, then press enter to remove the trigger file")
+    answer = str(input("-You should see 'removed trigger file'"))
+    print("Step 6: Type 5, then press enter to remove MSET9")
+    answer = str(input("-You should see 'Successfully removed MSET9!'"))
+    answer = str(input("Step 7: Press enter to close the MSET9 script"))
+    print("")
+    print("At this point, your console will boot Luma3DS by default")
+    print("-Luma3DS does not look any different from the normal home menu. If your console has booted into the home mnu, it is running custom firmware")
+    answer = str(input("In the next section, you will install useful homebrew applications to complete your setup"))
+    guide3dsfinalsetup()
 
+# Function for the "New 3ds" Section of the guide
+def guide3dsnew():
+    pass
+
+# Function for the finalize setup section of the guide
+def guide3dsfinalsetup():
+    pass
 
 guidedisclaimer()
