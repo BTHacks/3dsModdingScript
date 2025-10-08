@@ -274,13 +274,13 @@ def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S
         else:
             print("The program will now close.")
             quit
-    print(r"Required files will now download to C:\ConsoleHackingScript\a9lh2b9s")
-    try:
-        os.makedirs("C:/ConsoleHackingScript/a9lh2b9s")
-    except FileExistsError:
-        pass
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaLatest.zip")
-    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaOld.zip")
+    print(r"Required files will now download to C:\ConsoleHackingScript\a9lh2b9s") # Hey yeah so actually important here, when putting backslashes in ANY string, you gotta put a lowercase r before the quotes or else Python freaks the fuck out and won't run anything. Definitely didn't learn this the hard way after no bug testing for 12 hours.
+    try: # Tries this function
+        os.makedirs("C:/ConsoleHackingScript/a9lh2b9s") # Attempts to make a directory at this location
+    except FileExistsError: # If the file (path) already exists
+        pass # Just continues the script
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v13.3.3/Luma3DSv13.3.3.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaLatest.zip") # Downloads the file located at the called link to the designated path
+    urllib.request.urlretrieve("https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip", r"C:\ConsoleHackingScript\a9lh2b9s\LumaOld.zip") 
     urllib.request.urlretrieve("https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip", r"C:\ConsoleHackingScript\a9lh2b9s\SafeB9SInstaller.zip")
     urllib.request.urlretrieve("https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip", r"C:\ConsoleHackingScript\a9lh2b9s\boot9strap.zip")
     print("")
@@ -306,7 +306,7 @@ def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S
     answer = str(input("Step 3: When prompted, input the key combo given on the top screen to install boot9strap"))
     answer = str(input("Step 4: Your console should have booted into the Luma Config menu"))
     answer = str(input("Step 5: Press start to save and reboot"))
-    guide3dsfinalsetup()
+    guide3dsfinalsetup() # Calls the function finalsetup to continue the script
 
 # Function for updating B9S
 def guide3dsupdateb9s():
