@@ -36,8 +36,8 @@ def screenrefresh(x): # Simple few lines of code for a screen refresh
 def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it. Also randmizes the art, so I have an excuse to add more
     print("######################################################################################") # Prints a top border
     print("") # Prints an empty line
-    randomnum = random.randint(1, 3) # Sets the variable randomnum to a random integer
-    if randomnum == 1: # Calls this art if randomnum is 1
+    randomnum = random.randint(1, 4) # Sets the variable randomnum to a random integer, which then determines which ASCII art shows
+    if randomnum == 1: 
         print("________ ________    _________                    ")
         print("\_____  \\______ \  /   _____/                    ")
         print("  _(__  < |    |  \ \_____  \                     ")
@@ -56,7 +56,7 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
         print(" /        \  \___|  | \/  |  |_> >  |             ")
         print("/_______  /\___  >__|  |__|   __/|__|             ")
         print("        \/     \/         |__|                    ")
-    elif randomnum == 2: # Calls this art if randomnum is 2
+    elif randomnum == 2: 
         print("_____  ____  ____                        ")
         print("\__  \/  _ \/ ___\                       ")
         print("  /  || | \||    \                       ")
@@ -72,7 +72,7 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
         print("|    \|  / |  \/|| ||  \/| / \           ")
         print("\___ ||  \_|    /| ||  __/ | |           ")
         print("\____/\____|_/\_\\_/\_/    \_/           ")
-    elif randomnum == 3: # Calls this art if randomnum is 3
+    elif randomnum == 3: 
         print("  /$$$$$$  /$$$$$$$   /$$$$$$                                         ")
         print(" /$$__  $$| $$__  $$ /$$__  $$                                        ")
         print("|__/  \ $$| $$  \ $$| $$  \__/                                        ")
@@ -104,6 +104,25 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
         print("                                  | $$                                ")
         print("                                  | $$                                ")
         print("                                  |__/                                ")
+    elif randomnum == 4:
+        print("  ____  _____   _____                   ")
+        print(" |___ \|  __ \ / ____|                  ")
+        print("   __) | |  | | (___                    ")
+        print("  |__ <| |  | |\___ \                   ")
+        print("  ___) | |__| |____) |                  ")
+        print(" |____/|_____/|_____/    _              ")
+        print(" | |  | |          | |  (_)             ")
+        print(" | |__| | __ _  ___| | ___ _ __   __ _  ")
+        print(" |  __  |/ _` |/ __| |/ / | '_ \ / _` | ")
+        print(" | |  | | (_| | (__|   <| | | | | (_| | ")
+        print(" |_|__|_|\__,_|\___|_|\_\_|_| |_|\__, | ")
+        print("  / ____|         (_)     | |     __/ | ")
+        print(" | (___   ___ _ __ _ _ __ | |_   |___/  ")
+        print("  \___ \ / __| '__| | '_ \| __|         ")
+        print("  ____) | (__| |  | | |_) | |_          ")
+        print(" |_____/ \___|_|  |_| .__/ \__|         ")
+        print("                    | |                 ")
+        print("                    |_|                 ")
     print("") # Prints an empty line
     print("######################################################################################") # Prints the bottom border
     guidedisclaimer() # Calls the disclaimer function, continuing the script
