@@ -1,6 +1,7 @@
 # Imports a URL request library to download files
 import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
+#
 # Imports OS library for directory creation
 import os
 # Directory creation usage:
@@ -8,6 +9,9 @@ import os
 #   os.makedirs("directorypath")
 # except FileExistsError
 #   pass
+#
+# Imports the random library, just so I can randomize the ASCII art at startup
+import random
 
 # Simple few lines of code for a screen refresh
 def screenrefresh(x):
@@ -17,42 +21,80 @@ def screenrefresh(x):
         loopvar = loopvar - 1
     pass
 
-# Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it
+# Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it. Also randmizes the art, so I have an excuse to add more
 def startup():
-    print("######################################################################")
-    print("  /$$$$$$                                          /$$                ")
-    print(" /$$__  $$                                        | $$                ")
-    print("| $$  \__/  /$$$$$$  /$$$$$$$   /$$$$$$$  /$$$$$$ | $$  /$$$$$$       ")
-    print("| $$       /$$__  $$| $$__  $$ /$$_____/ /$$__  $$| $$ /$$__  $$      ")
-    print("| $$      | $$  \ $$| $$  \ $$|  $$$$$$ | $$  \ $$| $$| $$$$$$$$      ")
-    print("| $$    $$| $$  | $$| $$  | $$ \____  $$| $$  | $$| $$| $$_____/      ")
-    print("|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/|  $$$$$$/| $$|  $$$$$$$      ")
-    print(" \______/  \______/ |__/  |__/|_______/  \______/ |__/ \_______/      ")
+    print("######################################################################################")
     print("")
-    print(" /$$   /$$                     /$$       /$$                          ")
-    print("| $$  | $$                    | $$      |__/                          ")
-    print("| $$  | $$  /$$$$$$   /$$$$$$$| $$   /$$ /$$ /$$$$$$$   /$$$$$$       ")
-    print("| $$$$$$$$ |____  $$ /$$_____/| $$  /$$/| $$| $$__  $$ /$$__  $$      ")
-    print("| $$__  $$  /$$$$$$$| $$      | $$$$$$/ | $$| $$  \ $$| $$  \ $$      ")
-    print("| $$  | $$ /$$__  $$| $$      | $$_  $$ | $$| $$  | $$| $$  | $$      ")
-    print("| $$  | $$|  $$$$$$$|  $$$$$$$| $$ \  $$| $$| $$  | $$|  $$$$$$$      ")
-    print("|__/  |__/ \_______/ \_______/|__/  \__/|__/|__/  |__/ \____  $$      ")
-    print("                                                       /$$  \ $$      ")
-    print("                                                      |  $$$$$$/      ")
-    print("                                                       \______/       ")
-    print("  /$$$$$$                      /$$             /$$                    ")
-    print(" /$$__  $$                    |__/            | $$                    ")
-    print("| $$  \__/  /$$$$$$$  /$$$$$$  /$$  /$$$$$$  /$$$$$$                  ")
-    print("|  $$$$$$  /$$_____/ /$$__  $$| $$ /$$__  $$|_  $$_/                  ")
-    print(" \____  $$| $$      | $$  \__/| $$| $$  \ $$  | $$                    ")
-    print(" /$$  \ $$| $$      | $$      | $$| $$  | $$  | $$ /$$                ")
-    print("|  $$$$$$/|  $$$$$$$| $$      | $$| $$$$$$$/  |  $$$$/                ")
-    print(" \______/  \_______/|__/      |__/| $$____/    \___/                  ")
-    print("                                  | $$                                ")
-    print("                                  | $$                                ")
-    print("                                  |__/                                ")
-    print("######################################################################")
+    randomnum = random.randint(1, 3)
+    if randomnum == 1:
+        print("________ ________    _________                    ")
+        print("\_____  \\______ \  /   _____/                    ")
+        print("  _(__  < |    |  \ \_____  \                     ")
+        print(" /       \|    `   \/        \                    ")
+        print("/______  /_______  /_______  /                    ")
+        print("       \/        \/        \/                     ")
+        print("  ___ ___                __   .__                 ")
+        print(" /   |   \_____    ____ |  | _|__| ____    ____   ")
+        print("/    ~    \__  \ _/ ___\|  |/ /  |/    \  / ___\  ")
+        print("\    Y    // __ \\  \___|    <|  |   |  \/ /_/  > ")
+        print(" \___|_  /(____  /\___  >__|_ \__|___|  /\___  /  ")
+        print("       \/      \/     \/     \/       \//_____/   ")
+        print("  _________            .__        __              ")
+        print(" /   _____/ ___________|__|______/  |_            ")
+        print(" \_____  \_/ ___\_  __ \  \____ \   __\           ")
+        print(" /        \  \___|  | \/  |  |_> >  |             ")
+        print("/_______  /\___  >__|  |__|   __/|__|             ")
+        print("        \/     \/         |__|                    ")
+    elif randomnum == 2:
+        print("_____  ____  ____                        ")
+        print("\__  \/  _ \/ ___\                       ")
+        print("  /  || | \||    \                       ")
+        print(" _\  || |_/|\___ |                       ")
+        print("/____/\____/\____/                       ")
+        print(" _     ____  ____ _  __ _  _      _____  ")
+        print("/ \ /|/  _ \/   _Y |/ // \/ \  /|/  __/  ")
+        print("| |_||| / \||  / |   / | || |\ ||| |  _  ")
+        print("| | ||| |-|||  \_|   \ | || | \||| |_//  ")
+        print("\_/ \|\_/ \|\____|_|\_\\_/\_/  \|\____\  ")
+        print(" ____  ____ ____  _  ____ _____          ")
+        print("/ ___\/   _Y  __\/ \/  __Y__ __\         ")
+        print("|    \|  / |  \/|| ||  \/| / \           ")
+        print("\___ ||  \_|    /| ||  __/ | |           ")
+        print("\____/\____|_/\_\\_/\_/    \_/           ")
+    elif randomnum == 3:
+        print("  /$$$$$$  /$$$$$$$   /$$$$$$                                         ")
+        print(" /$$__  $$| $$__  $$ /$$__  $$                                        ")
+        print("|__/  \ $$| $$  \ $$| $$  \__/                                        ")
+        print("   /$$$$$/| $$  | $$|  $$$$$$                                         ")
+        print("  |___  $$| $$  | $$ \____  $$                                        ")
+        print(" /$$  \ $$| $$  | $$ /$$  \ $$                                        ")
+        print("|  $$$$$$/| $$$$$$$/|  $$$$$$/                                        ")
+        print(" \______/ |_______/  \______/                                         ")
+        print("")
+        print(" /$$   /$$                     /$$       /$$                          ")
+        print("| $$  | $$                    | $$      |__/                          ")
+        print("| $$  | $$  /$$$$$$   /$$$$$$$| $$   /$$ /$$ /$$$$$$$   /$$$$$$       ")
+        print("| $$$$$$$$ |____  $$ /$$_____/| $$  /$$/| $$| $$__  $$ /$$__  $$      ")
+        print("| $$__  $$  /$$$$$$$| $$      | $$$$$$/ | $$| $$  \ $$| $$  \ $$      ")
+        print("| $$  | $$ /$$__  $$| $$      | $$_  $$ | $$| $$  | $$| $$  | $$      ")
+        print("| $$  | $$|  $$$$$$$|  $$$$$$$| $$ \  $$| $$| $$  | $$|  $$$$$$$      ")
+        print("|__/  |__/ \_______/ \_______/|__/  \__/|__/|__/  |__/ \____  $$      ")
+        print("                                                       /$$  \ $$      ")
+        print("                                                      |  $$$$$$/      ")
+        print("                                                       \______/       ")
+        print("  /$$$$$$                      /$$             /$$                    ")
+        print(" /$$__  $$                    |__/            | $$                    ")
+        print("| $$  \__/  /$$$$$$$  /$$$$$$  /$$  /$$$$$$  /$$$$$$                  ")
+        print("|  $$$$$$  /$$_____/ /$$__  $$| $$ /$$__  $$|_  $$_/                  ")
+        print(" \____  $$| $$      | $$  \__/| $$| $$  \ $$  | $$                    ")
+        print(" /$$  \ $$| $$      | $$      | $$| $$  | $$  | $$ /$$                ")
+        print("|  $$$$$$/|  $$$$$$$| $$      | $$| $$$$$$$/  |  $$$$/                ")
+        print(" \______/  \_______/|__/      |__/| $$____/    \___/                  ")
+        print("                                  | $$                                ")
+        print("                                  | $$                                ")
+        print("                                  |__/                                ")
     print("")
+    print("######################################################################################")
     guidedisclaimer()
 
 # Beginning of guide, disclaimer agreement
@@ -572,6 +614,10 @@ def guide3dsfinalsetup():
     print("Congrats, you're done! You now have a fully modded Nintendo 3ds!!")
     answer = str(input("Press any key to close this script"))
     quit
+
+# Function for the version of the script that runs more automated than the guide portion
+def assist3ds():
+    pass
 
 # The single line of code ran at execution. This chains into all the rest of the script
 startup()
