@@ -1,4 +1,4 @@
-This is a combined script for guides hosted by the hacks.guide community. I am not affiliated with them, nor is this program endorsed by them.
+This is a script for modding a Nintendo 3ds, based on the guides provided at https://3ds.hacks.guide
 
 
 Requirements:
