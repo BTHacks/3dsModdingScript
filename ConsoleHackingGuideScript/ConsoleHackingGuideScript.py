@@ -25,20 +25,18 @@ from zipfile import ZipFile
 #   zObject.extract("NameOfFile", path=r"PathToExtractTo")
 # zObject.close
 
-# Simple few lines of code for a screen refresh
-def screenrefresh(x):
-    loopvar = int(x)
-    while loopvar >= 1:
-        print("")
-        loopvar = loopvar - 1
-    pass
+def screenrefresh(x): # Simple few lines of code for a screen refresh
+    loopvar = int(x) # Sets loopvar to the variable x
+    while loopvar >= 1: # Continues the loop while loopvar is above 0
+        print("") # Prints an empty line
+        loopvar = loopvar - 1 # Decreases loopvar by 1
+    pass # Ends the function by passing it back to whatever called it
 
-# Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it. Also randmizes the art, so I have an excuse to add more
-def startup():
-    print("######################################################################################")
-    print("")
-    randomnum = random.randint(1, 3)
-    if randomnum == 1:
+def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it. Also randmizes the art, so I have an excuse to add more
+    print("######################################################################################") # Prints a top border
+    print("") # Prints an empty line
+    randomnum = random.randint(1, 3) # Sets the variable randomnum to a random integer
+    if randomnum == 1: # Calls this art if randomnum is 1
         print("________ ________    _________                    ")
         print("\_____  \\______ \  /   _____/                    ")
         print("  _(__  < |    |  \ \_____  \                     ")
@@ -57,7 +55,7 @@ def startup():
         print(" /        \  \___|  | \/  |  |_> >  |             ")
         print("/_______  /\___  >__|  |__|   __/|__|             ")
         print("        \/     \/         |__|                    ")
-    elif randomnum == 2:
+    elif randomnum == 2: # Calls this art if randomnum is 2
         print("_____  ____  ____                        ")
         print("\__  \/  _ \/ ___\                       ")
         print("  /  || | \||    \                       ")
@@ -73,7 +71,7 @@ def startup():
         print("|    \|  / |  \/|| ||  \/| / \           ")
         print("\___ ||  \_|    /| ||  __/ | |           ")
         print("\____/\____|_/\_\\_/\_/    \_/           ")
-    elif randomnum == 3:
+    elif randomnum == 3: # Calls this art if randomnum is 3
         print("  /$$$$$$  /$$$$$$$   /$$$$$$                                         ")
         print(" /$$__  $$| $$__  $$ /$$__  $$                                        ")
         print("|__/  \ $$| $$  \ $$| $$  \__/                                        ")
@@ -105,13 +103,13 @@ def startup():
         print("                                  | $$                                ")
         print("                                  | $$                                ")
         print("                                  |__/                                ")
-    print("")
-    print("######################################################################################")
-    guidedisclaimer()
+    print("") # Prints an empty line
+    print("######################################################################################") # Prints the bottom border
+    guidedisclaimer() # Calls the disclaimer function, continuing the script
+    pass # Ends the function by passing it back to whatever called it
 
-# Beginning of guide, disclaimer agreement
-def guidedisclaimer():
-    print("")
+def guidedisclaimer(): # Beginning of guide, disclaimer agreement
+    print("") # Prints the disclaimer, I will not be adding individual comments for each line of this. They're print functions for Gods sake
     print("Welcome to the console hacking script! This is a simple python script for modding your Nintendo 3ds system!")
     print("Note: All resources are from the website https://hacks.guide")
     print("I claim no ownership over the guide, troubleshooting steps, or any information provided.")
@@ -120,17 +118,16 @@ def guidedisclaimer():
     print("This guide will automatically download any needed files for your selected mode, by running this program you agree to this program downloading said files. File sources will be commented in the source code, available on GitHub")
     print("")
     print("By typing y below, you agree to the above. Any other inputs will close the program")
-    answer = str(input("Do you agree? "))
+    answer = str(input("Do you agree? ")) # User input for continuing the script
     if answer == "y":
-        guidedecision()
+        guidedecision() # Calls the decision function to continue the script
     else:
-        print("The program will now close.")
-    pass
+        print("The program will now close.") # Essentially an empty condition that directly leads to a pass
+    pass # Ends the function by passing it back to what called it
 
-# Function to direct the user to the correct part of the script, depending on if they want a guide or if they want full automation
-def guidedecision():
-    screenrefresh(50)
-    print("This script has two main options, guide and assisted")
+def guidedecision(): # Function to direct the user to the correct part of the script, depending on if they want a guide or if they want full automation
+    screenrefresh(50) # Calls screen refresh to print 50 blank lines
+    print("This script has two main options, guide and assisted") # Once again, not commenting print functions.
     print("The guide is simply a guide, it'll download the files for you but that's about it.")
     print("Assisted mode will place any files in their proper places on the 3DS SD card")
     print("")
@@ -138,20 +135,20 @@ def guidedecision():
     print("1. Guide Mode")
     print("2. Assisted Mode")
     print("3. Quit program")
-    activeinput = int(1)
-    while activeinput == 1:
-        answer = str(input("Choice: "))
+    activeinput = int(1) # Sets this variable to 1 as a form of error checking
+    while activeinput == 1: # Keeps the loop rolling as long as activeinput is 1
+        answer = str(input("Choice: ")) # Calls for user input
         if answer == "1":
-            guide3ds()
-            activeinput = int(0)
+            guide3ds() # Calls the guide function to continue the script
+            activeinput = int(0) # Sets activeinput to 0, ending the loop
         elif answer == "2":
-            assist3ds()
-            activeinput = int(0)
+            assist3ds() # Calls the assist function to continue the script
+            activeinput = int(0) # Sets activeinput to 0, ending the loop
         elif answer == "3":
-            quit
+            quit # Literally just ends the program. What did you think would happen?
         else:
-            print("Invalid input, please try again")
-    pass
+            print("Invalid input, please try again") # Error checking, continues the loop at the user input after printing this
+    pass # End the function by passing it back to what called it
 
 # Function to run the 3ds section of the guide
 def guide3ds():
@@ -639,6 +636,9 @@ def assist3ds():
         pass
     print("")
     print("This script will be using an exploit known as MSET9 to modify your system")
+    print("The script wll automatically place files in their proper places on the SD card, you will simply need to state the drive letter before doing so.")
+    print("all files that will be put on your system are credited on the GitHub page")
+    answer = str(input("Press any key to continue "))
 
 # The single line of code ran at execution. This chains into all the rest of the script
 startup()
