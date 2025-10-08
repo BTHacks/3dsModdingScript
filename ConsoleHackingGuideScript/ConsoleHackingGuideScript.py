@@ -58,7 +58,7 @@ def startup():
 # Beginning of guide, disclaimer agreement
 def guidedisclaimer():
     print("")
-    print("Welcome to the console hacking guide! This is a simple python script with instructions for console modding!")
+    print("Welcome to the console hacking script! This is a simple python script for modding your Nintendo 3ds system!")
     print("Note: All resources are from the website https://hacks.guide")
     print("I claim no ownership over the guide, troubleshooting steps, or any information provided.")
     print("IMPORTANT DISCLAMER, MUST READ BEFORE CONTINUING")
@@ -68,34 +68,9 @@ def guidedisclaimer():
     print("By typing y below, you agree to the above. Any other inputs will close the program")
     answer = str(input("Do you agree? "))
     if answer == "y":
-        guidecontinue()
+        guide3ds()
     else:
         print("The program will now close.")
-    pass
-
-# Guide selection script, can be called after disclaimer, upon guide completion, or if a certain input is chosen within other sections
-def guidecontinue():
-    screenrefresh(50)
-    print("Please select what guide you would like")
-    print("Available guides:")
-    print("1) 3ds 2) Wii 3) Wii U 4) Playstation Vita")
-    activeinput = int(1)
-    while activeinput == 1:
-        answer = str(input("Enter selection: "))
-        if answer == "1":
-            guide3ds()
-            activeinput = int(0)
-        elif answer == "2":
-            guidewii()
-            activeinput = int(0)
-        elif answer == "3":
-            guidewiiu()
-            activeinput = int(0)
-        elif answer == "4":
-            guidevita()
-            activeinput = int(0)
-        else:
-            print("Invalid input, try again")
     pass
 
 # Function to run the 3ds section of the guide
@@ -570,19 +545,6 @@ def guide3dsfinalsetup():
     print("Congrats, you're done! You now have a fully modded Nintendo 3ds!!")
     answer = str(input("Press any key to close this script"))
     quit
-
-# Function to run the Wii section of the guide
-def guidewii():
-    screenrefresh(50)
-
-
-# Function to run the Wii U section of the guide
-def guidewiiu():
-    pass
-
-# Function to run the PlayStation Vita section of the guide
-def guidevita():
-    pass
 
 # The single line of code ran at execution. This chains into all the rest of the script
 startup()
