@@ -25,6 +25,7 @@ from zipfile import ZipFile
 #   zObject.extract("NameOfFile", path=r"PathToExtractTo")
 # zObject.close
 
+# The next few hundred lines are just function definitions.. I don't know if this is good programming, or if this whole program is held together with duct tape and dreams. Either way, who cares!
 def screenrefresh(x): # Simple few lines of code for a screen refresh
     loopvar = int(x) # Sets loopvar to the variable x
     while loopvar >= 1: # Continues the loop while loopvar is above 0
@@ -208,10 +209,9 @@ def guide3ds(): # Function to run the 3ds section of the guide
             print("Invalid input, try again.")
     pass # Ends this function by passing it back to what called it
 
-# Function for the custom firmware check of the initial guide
-def guide3dscfwcheck():
-    screenrefresh(50)
-    print("Required reading")
+def guide3dscfwcheck(): # Function for the custom firmware check of the initial guide
+    screenrefresh(50) # You've seen this before, why explain it again?
+    print("Required reading") # Despite everything, it's still a print function
     print("This is an add-on section to check if your console already has a modern custom firmware")
     print("If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one")
     print("")
@@ -229,20 +229,20 @@ def guide3dscfwcheck():
         answer = str(input("Input:"))
         if answer == "1":
             print("You do not have custom firmware, returning to the beginning of the guide")
-            guide3ds()
-            activeinput = int(0)
+            guide3ds() # Calls this function to return to the guide
+            pass # Ends this function by passin it back to what called it. You surely understand by this point... right?
         elif answer == "2":
             activeinput = int(0)
-            pass
+            pass # See the comment 3 lines above.
         else:
-            print("Invalid input, please try again")
+            print("Invalid input, please try again") # Input error handling is more important to me than my parents marriage
     print("")
     print("You should see a version of Luma3DS on the screen.")
     print("1. Version 7.0.5 or lower")
     print("2. Version 7.1")
     print("3. Version 8.0 or newer")
     activeinput = int(1)
-    while activeinput == 1:
+    while activeinput == 1: # Yeah yeah blah blah blah conditionals and function calls, please don't make me keep commenting on these I have chipped the nails on 3 of my fingers already man ;-;
         answer = str(input("Please enter the number corresponding with the version shown"))
         if answer == "1":
             print("Continuing to the section of updating A9LH to B9S")
@@ -639,5 +639,4 @@ def assist3ds():
     print("all files that will be put on your system are credited on the GitHub page")
     answer = str(input("Press any key to continue "))
 
-# The single line of code ran at execution. This chains into all the rest of the script
-startup()
+startup() # The single line of code ran at execution. This chains into all the rest of the script.
