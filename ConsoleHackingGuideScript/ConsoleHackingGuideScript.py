@@ -12,6 +12,18 @@ import os
 #
 # Imports the random library, just so I can randomize the ASCII art at startup
 import random
+#
+# Imports the ZipFile library, used to unzip files
+from zipfile import ZipFile
+# Usage:
+# For unzipping all files from a zip:
+# with Zipfile(r"PathToFile", 'r') as zObject
+#   zObject.extractall(path=r"PathToExtractTo")
+#
+# For unzipping a specific file:
+# with ZipFile(r"PathToFile", 'r') as zObject
+#   zObject.extract("NameOfFile", path=r"PathToExtractTo")
+# zObject.close
 
 # Simple few lines of code for a screen refresh
 def screenrefresh(x):
