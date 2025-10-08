@@ -260,7 +260,7 @@ def guide3dscfwcheck(): # Function for the custom firmware check of the initial 
             print("Invalid input, please try again")
     pass
 
-def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S
+def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S with a long ass unreadable function name that I'm too lazy to change
     screenrefresh(50)
     print("Updating A9LH to B9S")
     print("Notice: this section of the script cannot be used if you have a New 3ds system (New Nintendo 3ds, New Nintendo 3ds XL/LL, New Nintendo 2ds XL/LL)")
@@ -308,8 +308,7 @@ def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S
     answer = str(input("Step 5: Press start to save and reboot"))
     guide3dsfinalsetup() # Calls the function finalsetup to continue the script
 
-# Function for updating B9S
-def guide3dsupdateb9s():
+def guide3dsupdateb9s(): # Function for updating B9S... there's actually not a ton that's new here
     screenrefresh(50)
     print("Updating boot9strap")
     print("Required Reading")
@@ -345,10 +344,9 @@ def guide3dsupdateb9s():
     answer = str(input("Step 4: Power on your console"))
     print("Step 5: If your console has booted into the Luma3DS configuration menu, press start to save and reboot")
     answer = str(input("-Don't change any settings"))
-    guide3dsfinalsetup()
+    guide3dsfinalsetup() # You saw this in the last function, and it will return
 
-# Function for restoring and updating CFW
-def guide3dsupdateorrestorecfw():
+def guide3dsupdateorrestorecfw(): # Function for restoring and updating CFW... with also nothing new. Wow, commenting is easy as pie!
     screenrefresh(50)
     print("Restoring / updating CFW")
     print("Required reading:")
@@ -366,8 +364,7 @@ def guide3dsupdateorrestorecfw():
     answer = str(input("Step 4: Power on your console"))
     guide3dsfinalsetup()
 
-# Functon for the "MSET9" section of the guide
-def guide3dsmset9():
+def guide3dsmset9(): # Functon for the "MSET9" section of the guide. Long ass block of text with nothing new.
     screenrefresh(50)
     print("MSET9-based Homebrew installation")
     print("We will now install CFW on your system using the MSET9 method")
@@ -454,8 +451,7 @@ def guide3dsmset9():
     answer = str(input("In the next section, you will install useful homebrew applications to complete your setup"))
     guide3dsfinalsetup()
 
-# Function for the "super-skaterhax" Section of the guide
-def guide3dssuperskaterhax():
+def guide3dssuperskaterhax(): # Function for the "super-skaterhax" Section of the guide. I hate super-skaterhax but y'know. Also nothing new again blah blah blah
     screenrefresh(50)
     print("super-skaterhax based homebrew installation")
     print("Note: this guide takes less time, but is known to be inconsistent. If you wish to use a more consistent exploit, type n below to be rerouted to the MSET9 section")
@@ -544,8 +540,7 @@ def guide3dssuperskaterhax():
     answer = str(input("-In the next section, you will install useful homebrew applications to complete your setup"))
     guide3dsfinalsetup()
 
-# Function for the finalize setup section of the guide
-def guide3dsfinalsetup():
+def guide3dsfinalsetup(): # Function for the finalize setup section of the guide. "The final function" - My delusional ass a few days before returning to VSC. As usual, nothing new here
     screenrefresh(50)
     print("Required Reading")
     print("In the previous section, you installed boot9strap, a custom firmware loader that loads the file boot.firm from SD card or NAND (internal memory). In this case, we are using Luma3DS by LumaTeam as our boot.firm to patch the console, allowing it to run homebrew software.")
@@ -621,8 +616,7 @@ def guide3dsfinalsetup():
     answer = str(input("Press any key to close this script"))
     quit
 
-# Function for the version of the script that runs more automated than the guide portion
-def assist3ds():
+def assist3ds(): # Function for the version of the script that runs more automated than the guide portion. This WILL actually have a lot of new things that I'm sure will work on the first try.
     screenrefresh(50)
     print("This version of the script will do functions like placing files and running any needed .bat files for you")
     print("This is still a feature in development, success is not guaranteed, and any damage done is an accepted risk by the end user")
@@ -638,4 +632,4 @@ def assist3ds():
     print("all files that will be put on your system are credited on the GitHub page")
     answer = str(input("Press any key to continue "))
 
-startup() # The single line of code ran at execution. This chains into all the rest of the script.
+startup() # The single line of code ran at execution. This chains into all the rest of the script. Comment this out and EVERYTHING falls apart, so don't do that
