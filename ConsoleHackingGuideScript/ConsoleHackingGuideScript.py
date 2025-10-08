@@ -260,8 +260,7 @@ def guide3dscfwcheck(): # Function for the custom firmware check of the initial 
             print("Invalid input, please try again")
     pass
 
-# Function for updating A9LH to B9S
-def guide3dsa9lh2b9s():
+def guide3dsa9lh2b9s(): # Function for updating A9LH to B9S
     screenrefresh(50)
     print("Updating A9LH to B9S")
     print("Notice: this section of the script cannot be used if you have a New 3ds system (New Nintendo 3ds, New Nintendo 3ds XL/LL, New Nintendo 2ds XL/LL)")
