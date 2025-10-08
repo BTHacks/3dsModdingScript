@@ -68,10 +68,37 @@ def guidedisclaimer():
     print("By typing y below, you agree to the above. Any other inputs will close the program")
     answer = str(input("Do you agree? "))
     if answer == "y":
-        guide3ds()
+        guidedecision()
     else:
         print("The program will now close.")
     pass
+
+# Function to direct the user to the correct part of the script, depending on if they want a guide or if they want full automation
+def guidedecision():
+    screenrefresh(50)
+    print("This script has two main options, guide and assisted")
+    print("The guide is simply a guide, it'll download the files for you but that's about it.")
+    print("Assisted mode will place any files in their proper places on the 3DS SD card")
+    print("")
+    print("Please select which mode you wish to use")
+    print("1. Guide Mode")
+    print("2. Assisted Mode")
+    print("3. Quit program")
+    activeinput = int(1)
+    while activeinput == 1:
+        answer = str(input("Choice: "))
+        if answer == "1":
+            guide3ds()
+            activeinput = int(0)
+        elif answer == "2":
+            assist3ds()
+            activeinput = int(0)
+        elif answer == "3":
+            quit
+        else:
+            print("Invalid input, please try again")
+    pass
+
 
 # Function to run the 3ds section of the guide
 def guide3ds():
@@ -88,7 +115,7 @@ def guide3ds():
         answer = str(input("Continue?"))
         if answer == "n":
             print("The guide will now go back to the selection menu")
-            guidecontinue()
+            guidedecision()
             activeinput = int(0)
         else:
             activeinput = int(0)
