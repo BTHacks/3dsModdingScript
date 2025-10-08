@@ -150,43 +150,42 @@ def guidedecision(): # Function to direct the user to the correct part of the sc
             print("Invalid input, please try again") # Error checking, continues the loop at the user input after printing this
     pass # End the function by passing it back to what called it
 
-# Function to run the 3ds section of the guide
-def guide3ds():
-    screenrefresh(50)
-    print("Welcome to the Nintendo 3ds homebrew guide. We will begin by going over key information.")
-    answer = str(input("Press any key to continue"))
+def guide3ds(): # Function to run the 3ds section of the guide
+    screenrefresh(50) # Calls the screen refresh function to print 50 blank lines
+    print("Welcome to the Nintendo 3ds homebrew guide. We will begin by going over key information.") # Again again, not commenting on every print function.
+    answer = str(input("Press any key to continue")) # Any user inputs such as this without conditionals after it are simply there to pause the script until a key is pressed. If I used normal print functions, this would just barrel along and that blows
     print("")
     print("Compatible systems for this guide: Nintendo 3ds, 3ds XL/LL, 2ds, New 3ds, New 3ds XL/LL, New 2ds XL/LL")
     print("Supported regons: all")
     print("What you need: A computer, a way to read and write to your 3ds system's SD/Micro SD card")
     print("If you do not meet these requirements, or wish to go back, type n on the upcoming prompt. Any other input will continue the guide")
-    activeinput = int(1)
-    while activeinput == 1:
-        answer = str(input("Continue?"))
+    activeinput = int(1) # Sets this variable to 1
+    while activeinput == 1: # COntinues this loop while activeinput is 1
+        answer = str(input("Continue?")) # User input
         if answer == "n":
             print("The guide will now go back to the selection menu")
-            guidedecision()
-            activeinput = int(0)
+            guidedecision() # Circles back to the guidedecision menu
+            pass # Ends this function
         else:
-            activeinput = int(0)
+            activeinput = int(0) # Simply ends the loop
     print("")
     print("The guide will now continue")
     print("Before starting this guide, we will check if your system already has CFW installed.")
     print("CFW CHECK STEPS")
     print("1. Power off your system")
     print("2. Hold select while powering on the system")
-    activeinput = int(1)
-    while activeinput == 1:
-        answer = str(input("Does your console boot to the normal home menu? (y/n)"))
+    activeinput = int(1) # Sets this variable to 1
+    while activeinput == 1: # Continues this loop while activeinput is 1. Did you know there was a Peggle 2 Xbox 360? Crazy stuff.
+        answer = str(input("Does your console boot to the normal home menu? (y/n)")) # User input
         if answer == "y":
             print("Your system does not have CFW installed, you may continue with the guide")
-            activeinput = int(0)
+            activeinput = int(0) # Ends the loop
         elif answer == "n":
             print("Your system may have custom firmware, we will continue to a further check.")
-            guide3dscfwcheck()
-            activeinput = int(0)
+            guide3dscfwcheck() # Calls the cfwcheck function
+            pass # Ends this function
         else:
-            print("Invalid input, try again")
+            print("Invalid input, try again") # Input error handling my beloved
     print("Before continuing, please make sure your console is on the latest official 3ds firmware")
     print("Latest firmware: Ver. 11.17.0-50")
     print("If your system is not on the latest firmware, please update before continuing")
@@ -194,7 +193,7 @@ def guide3ds():
     print("")
     print("Please enter which type of 3ds system you have")
     print("1) Old (3ds, 3ds XL/LL, 2ds) 2) New (New 3ds, New 3ds XL/LL, New 2ds XL/LL)")
-    activeinput = int(1)
+    activeinput = int(1) # There were two other loops like this within this function alone. I think you get the idea of how loops work, if not please just read the comments I already wrote, my wrists are killing me man
     while activeinput == 1:
         answer = str(input("System type: "))
         if answer == "1":
@@ -207,7 +206,7 @@ def guide3ds():
             activeinput = int(0)
         else:
             print("Invalid input, try again.")
-    pass
+    pass # Ends this function by passing it back to what called it
 
 # Function for the custom firmware check of the initial guide
 def guide3dscfwcheck():
