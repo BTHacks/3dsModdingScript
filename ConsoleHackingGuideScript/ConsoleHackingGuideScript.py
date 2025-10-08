@@ -104,8 +104,8 @@ def guidedisclaimer():
     print("Note: All resources are from the website https://hacks.guide")
     print("I claim no ownership over the guide, troubleshooting steps, or any information provided.")
     print("IMPORTANT DISCLAMER, MUST READ BEFORE CONTINUING")
-    print("Modifying your console carries a risk or permanent damage. The guides provided are tested, and troubleshooting is available, but there is no guarantee you won't irreversably brick your system. The individual/individuals following this guide are entirely responsible for what happens, and may not hold the author of the guides nor the program writer(s) responsible for any damage")
-    print("This guide will automatically download any needed files for your selected guide, by running this program you agree to this program downloading said files. File sources will be commented in the source code, available on GitHub")
+    print("Modifying your console carries a risk of permanent damage. The guides provided are tested, and troubleshooting is available, but there is no guarantee you won't irreversably brick your system. The individual/individuals following this guide are entirely responsible for what happens, and may not hold the author of the guides nor the program writer(s) responsible for any damage")
+    print("This guide will automatically download any needed files for your selected mode, by running this program you agree to this program downloading said files. File sources will be commented in the source code, available on GitHub")
     print("")
     print("By typing y below, you agree to the above. Any other inputs will close the program")
     answer = str(input("Do you agree? "))
@@ -140,7 +140,6 @@ def guidedecision():
         else:
             print("Invalid input, please try again")
     pass
-
 
 # Function to run the 3ds section of the guide
 def guide3ds():
@@ -617,7 +616,17 @@ def guide3dsfinalsetup():
 
 # Function for the version of the script that runs more automated than the guide portion
 def assist3ds():
-    pass
+    screenrefresh(50)
+    print("This version of the script will do functions like placing files and running any needed .bat files for you")
+    print("This is still a feature in development, success is not guaranteed, and any damage done is an accepted risk by the end user")
+    print("If you wish to go back, type n in the upcoming prompt. Any other input will continue the script")
+    answer = str(input("Continue? "))
+    if answer == "n":
+        guidedecision()
+    else:
+        pass
+    print("")
+    print("This script will be using an exploit known as MSET9 to modify your system")
 
 # The single line of code ran at execution. This chains into all the rest of the script
 startup()
