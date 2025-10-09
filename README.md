@@ -7,6 +7,7 @@ Python 3.9
 
 Windows
 
+ALL LIBRARIES USED IN THE SCRIPT COME DEFAULT WITH PYTHON, NOTHING ELSE NEEDS TO BE INSTALLED IF YOU HAVE PYTHON 3.9
 
 This program will download files to your computer, all file download sources will be listed below, as well as commented in the source code
 
@@ -17,10 +18,6 @@ This was made for a school project, it will NOT be the most up to date guide. Fo
 CREDITS:
 
 Guides from https://hacks.guide
-
-
-
-For the 3ds guide:
 
 MSET9 exploit: https://github.com/hacks-guide/MSET9
 
