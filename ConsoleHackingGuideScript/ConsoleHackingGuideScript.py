@@ -135,6 +135,7 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
         print("                    |_|                 ")
     print("") # Prints an empty line
     print("######################################################################################") # Prints the bottom border
+    time.sleep(3) # Adds a 3 second wait before continuing execution so you can see the awesome ASCII art
     guidedisclaimer() # Calls the disclaimer function, continuing the script
     pass # Ends the function by passing it back to whatever called it
 
