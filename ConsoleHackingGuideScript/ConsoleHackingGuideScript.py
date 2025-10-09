@@ -24,6 +24,16 @@ from zipfile import ZipFile
 # with ZipFile(r"PathToFile", 'r') as zObject
 #   zObject.extract("NameOfFile", path=r"PathToExtractTo")
 # zObject.close
+#
+# Imports the shutil library for directory management (specifically directory removal)
+import shutil
+# Usage for removal:
+# shutil.rmtree(path)
+#
+# Imports time library for wait functions
+import time
+# Usage:
+# time.sleep(time in seconds)
 
 # The next few hundred lines are just function definitions.. I don't know if this is good programming, or if this whole program is held together with duct tape and dreams. Either way, who cares!
 def screenrefresh(x): # Simple few lines of code for a screen refresh
@@ -660,6 +670,212 @@ def assist3ds(): # Function for the version of the script that runs more automat
     urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", sdmount + ":\\HackingScriptFiles\\MSET9.zip") # Downloads the files for MSET9
     with ZipFile(sdmount + ":\\HackingScriptFiles\\MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
         zObject.extractall(path=sdmount + ":\\") # Unzips the files at the specified location
-
+    print("")
+    print("########################")
+    print("MSET9 Script Instructions:")
+    print("########################")
+    print("1. Press the number for your console and firmware version")
+    print("2. Press the number 1 to create the hacked ID1")
+    print("3. When done, press enter to close the script")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to open the MSET9 script"))
+    os.chdir(sdmount + ":\\") # Sets path where the .bat file is located
+    os.startfile("MSET9-Windows.bat") # Runs the .bat file
+    answer = str(input("Press any key to continue when MSET9 script closes"))
+    print("")
+    print("########################")
+    print("NEXT STEPS")
+    print("########################")
+    print("1. Reinsert your SD card into your console")
+    print("2. Power on your console and launch the Mii Maker application")
+    print("3. Wait until you reach the 'Welcome to Mii Maker' screen, then close the app")
+    print("4. Launch system settings and navigate to:")
+    print("   Data Management > Nintendo 3DS > Software > Reset")
+    print("5. Power off your console STAY HOVERED OVER SYSTEM SETTINGS, THIS IS IMPORTANT")
+    print("6. Insert your SD card into your computer.")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue"))
+    print("")
+    answer = str(input("Did your SD card drive letter change? (y/n) "))
+    if answer == "y":
+        sdmount = str(input("Please input your new drive letter (Capitalized): ")) # If the drive letter changes, this reassigns the sdmount variable accordingly. You'll see this one a lot
+    else:
+        pass
+    print("")
+    print("########################")
+    print("MSET9 Instructions: ")
+    print("########################")
+    print("1. Input the number of your console and firmware version")
+    print("2. If the window says 'Ready', press 0 to close the script")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to open the MSET9 script "))
+    os.chdir(sdmount + ":\\")
+    os.startfile("MSET9-Windows.bat")
+    answer = str(input("Press any key to continue once the script is closed"))
+    print("")
+    print("########################")
+    print("Continuing on the 3DS")
+    print("########################")
+    print("1. Reinsert your sd card and power the system on")
+    print("-If system settings isn't selected on boot, hover over it and reboot the console")
+    print("-And pay more attention to the instructions next time-")
+    print("2. Launch system settings")
+    print("3. Navigate to Data Management > Nintendo 3DS > Extra Data")
+    print("4. PRESS NOTHING, DO NOT TOUCH THE SCREEN UNTIL TOLD TO DO SO")
+    print("5. With the console STILL ON, remove your SD card from the console")
+    print("6. Insert your SD card into your computer")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue"))
+    print("")
+    answer = str(input("Did your SD Card drive letter change? (y/n) "))
+    if answer == "y":
+        sdmount = str(input("Please input your new drive letter (Capitalized): "))
+    else:
+        pass
+    print("")
+    print("########################")
+    print("MSET9 Instructions")
+    print("########################")
+    print("1. Input the number corresponding to your console model and firmware version")
+    print("2. Input 3 to inject MSET9")
+    print("3. Press enter to close the MSET9 script")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to launch the MSET9 script"))
+    os.chdir(sdmount +":\\")
+    os.startfile("MSET9-Windows.bat")
+    answer = str(input("Press any key to continue once the script is closed"))
+    print("")
+    print("########################")
+    print("Continuing on the 3DS")
+    print("########################")
+    print("1. Reinsert your SD Card, still pressing NOTHING")
+    print("2. You should boot into SafeB9SInstaller")
+    print("3. When prompted, input the key combo given on the top screen to install boot9strap")
+    print("4. Once it is complete (all seven steps on bottom screen are green), press A to reboot your device")
+    print("5. You should boot into the Luma3DS config menu")
+    print("-Don't change anything, you don't need to")
+    print("6. Press start to save and reboot")
+    print("7. Power off your console")
+    print("8. Remove your SD Card and put it in your computer")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue"))
+    print("")
+    answer = str(input("Did your SD Card drive letter change? (y/n) "))
+    if answer == "y":
+        sdmount = str(input("Please input your new drive letter (Capitalized): "))
+    else:
+        pass
+    print("")
+    print("########################")
+    print("MSET9 Instructions")
+    print("########################")
+    print("1. Input the number corresponding with your console model and firmware version")
+    print("2. Input 4 and press enter")
+    print("3. Input 5 and press enter")
+    print("4. Press enter to close the script")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to open the MSET9 script"))
+    os.chdir(sdmount + ":\\")
+    os.startfile("MSET9-Windows.bat")
+    answer = str(input("Press any key to continue once the script is closed"))
+    print("")
+    print("########################")
+    print("Important notes before final setup")
+    print("########################")
+    print("Your console now boots Luma3DS by default. It doesn't look any different from the stock HOME menu. If your console has booted into the HOME menu, it is running custom firmware")
+    print("The final steps of this script will be adding some useful homebrew applications. You CAN skip this, but it's recommended you continue.")
+    print("By continuing, the files will automatically be placed where they need to go")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue"))
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", sdmount + ":\\finalize.romfs") # Downloads a needed file right to the specified directory
+    try:
+        os.makedirs(sdmount + ":\\luma") # Makes this directory if it desn't exist
+    except FileExistsError:
+        pass
+    try:
+        os.makedirs(sdmount + ":\\luma\\payloads") # Makes this directory if it desn't exist. Yes I had to make it two seperate functions, having just this one hung python for a while...
+    except FileExistsError:
+        pass
+    urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", sdmount + ":\\luma\\payloads\\x_finalize_helper.firm") # Downloads a needed file right to the specified directory
+    print("")
+    print("Files successfully downloaded")
+    print("")
+    print("########################")
+    print("Continuing on the 3ds")
+    print("########################")
+    print("Section I")
+    print("########################")
+    print("1. Insert your SD card into the console and power it on")
+    print("2. Once booted, press L + D-pad down + select")
+    print("3. Select 'Miscellaneous options")
+    print("4. Select 'Dump DSP firmware'")
+    print("5. Press B to continue")
+    print("6. Select 'Nullify user time offset'")
+    print("7. Keep pressing B until the Rosalina menu closes")
+    print("########################")
+    answer = str(input("Press any key to continue "))
+    print("########################")
+    print("Section II")
+    print("########################")
+    print("1. Power off your console")
+    print("2. Hold X, and while holding X power on the console")
+    print("-This will launch the setup helper")
+    print("3. If the helper was successful, your console will boot into GodMode9")
+    print("-From now on,you can access GM9 by holding start on boot")
+    print("4. If you are prompted to create an essential files backup, press A to do so, then press A to continue once it's completed")
+    print("5. If you are prompted to fix the RTC date & time, press A to do so, set the date and time, and press A to continue")
+    print("6. Press HOME to bring up the actions menu")
+    print("7. Select 'Scripts...'")
+    print("8. Select 'finalize'")
+    print("9. Follow the prompts in the script, answering any questions that you are asked")
+    print("10. Once the script says 'Setup complete!', press A to power off the device")
+    print("11. Insert your SD card into your computer")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue "))
+    print("")
+    answer = str(input("Did your SD Card drive letter change? (y/n) "))
+    if answer == "y":
+        sdmount = str(input("Please input your new drive letter (Capitalized): "))
+    else:
+        pass
+    print("")
+    print("########################")
+    print("Final steps")
+    print("########################")
+    print("1. Copy the ", sdmount, ":/gm9/backups/ folder to a safe location")
+    print("-This folder contains your critical file backups, and can revert a bricked console back to a working state")
+    print("2. After copying, these backups will be deleted by the script to maintain SD card storage")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to continue"))
+    print("")
+    print("The script will now clean up your SD card from files no longer needed")
+    time.sleep(2)
+    try:
+        shutil.rmtree(sdmount + ":\\gm9\\backups") # Deletes this folder from the SD card, if it exists
+    except FileNotFoundError:
+        pass
+    try:
+        shutil.rmtree(sdmount + ":\\HackingScriptFiles") # Also deletes THIS folder from the SD card, if it exists
+    except FileNotFoundError:
+        pass
+    print("")
+    print("########################")
+    print("CONGRATULATIONS!")
+    print("########################")
+    print("Your 3ds system is now fully homebrewed! Have fun with your freedom!")
+    print("########################")
+    print("")
+    answer = str(input("Press any key to close the program"))
+    quit # Shuts the program down, what else did you think a function called 'quit' would do?
 
 startup() # The single line of code ran at execution. This chains into all the rest of the script. Comment this out and EVERYTHING falls apart, so don't do that
