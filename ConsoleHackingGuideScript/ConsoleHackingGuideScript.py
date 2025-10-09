@@ -6,7 +6,7 @@ import urllib.request
 import os
 # Directory creation usage:
 # try:
-#   os.makedirs("directorypath")
+#   os.makedirs(r"directorypath")
 # except FileExistsError
 #   pass
 #
@@ -652,7 +652,14 @@ def assist3ds(): # Function for the version of the script that runs more automat
     answer = str(input("Press any key to continue "))
     print("Please turn off your system and remove the SD/MicroSD card")
     answer = str(input("Please insert your SD card into your computer"))
-    sdmount = str(input("Please input what drive letter your SD card is mounted at (Capitalized): "))
+    sdmount = str(input("Please input what drive letter your SD card is mounted at (Capitalized): ")) # Assigns a variable for where the drive is mounted
+    try:
+        os.makedirs(sdmount + ":\\HackingScriptFiles") # Makes the directory where files are located
+    except FileExistsError:
+        pass # Passes if directory exists
+    urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", sdmount + ":\\HackingScriptFiles\\MSET9.zip") # Downloads the files for MSET9
+    with ZipFile(sdmount + ":\\HackingScriptFiles\\MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
+        zObject.extractall(path=sdmount + ":\\") # Unzips the files at the specified location
 
 
 startup() # The single line of code ran at execution. This chains into all the rest of the script. Comment this out and EVERYTHING falls apart, so don't do that
