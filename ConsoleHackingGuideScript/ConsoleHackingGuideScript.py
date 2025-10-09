@@ -650,5 +650,9 @@ def assist3ds(): # Function for the version of the script that runs more automat
     print("The script wll automatically place files in their proper places on the SD card, you will simply need to state the drive letter before doing so.")
     print("all files that will be put on your system are credited on the GitHub page")
     answer = str(input("Press any key to continue "))
+    print("Please turn off your system and remove the SD/MicroSD card")
+    answer = str(input("Please insert your SD card into your computer"))
+    sdmount = str(input("Please input what drive letter your SD card is mounted at (Capitalized): "))
+
 
 startup() # The single line of code ran at execution. This chains into all the rest of the script. Comment this out and EVERYTHING falls apart, so don't do that
