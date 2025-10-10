@@ -46,7 +46,7 @@ def screenrefresh(x): # Simple few lines of code for a screen refresh
 def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely pointless, but I like it. Also randmizes the art, so I have an excuse to add more
     print("######################################################################################") # Prints a top border
     print("") # Prints an empty line
-    randomnum = random.randint(1, 4) # Sets the variable randomnum to a random integer, which then determines which ASCII art shows
+    randomnum = random.randint(1, 5) # Sets the variable randomnum to a random integer, which then determines which ASCII art shows
     if randomnum == 1: 
         print("________ ________    _________                    ")
         print("\_____  \\______ \  /   _____/                    ")
@@ -133,8 +133,15 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
         print(" |_____/ \___|_|  |_| .__/ \__|         ")
         print("                    | |                 ")
         print("                    |_|                 ")
+    elif randomnum == 5:
+        print("Sorry, the ASCII art man isn't in today")
+        print("Please enjoy this boring, standard, regular boot screen.")
     print("") # Prints an empty line
     print("######################################################################################") # Prints the bottom border
+    print("3DS Hacking Script")
+    print("Version 1.0")
+    print("'The One That Added Automation'")
+    print("######################################################################################")
     time.sleep(3) # Adds a 3 second wait before continuing execution so you can see the awesome ASCII art
     guidedisclaimer() # Calls the disclaimer function, continuing the script
     pass # Ends the function by passing it back to whatever called it
