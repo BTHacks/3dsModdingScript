@@ -38,6 +38,7 @@ import time
 # Imports the tkinter library for UI usage
 import tkinter
 
+# Function to run a UI. Still learning how all this works so idk
 def msui():
     tkinter._test()
     pass
