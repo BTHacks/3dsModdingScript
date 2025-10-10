@@ -1,0 +1,5 @@
+Hey, it's BTHacks, one of the devs of this project, specifically the lead of the CLI version of the script. I wanted to explain a little about how the source code is all organized, mostly because it's helpful for future reference.
+
+This project is split into two main folders, 3dsModdingScriptCLI, and 3dsModdingScriptUI. The folder labeled CLI is obviously the command line version of the script, and the UI folder is the version of the script with a proper UI. Both folders have their respective python code in the .py file, as well as a .pyproj file that honestly I have no damn idea what it does, but I'm not gonna delete it.
+
+Other than that, there's nothing else really here. I might put some folder on here to pull homebrew files from, but I don't have permission from the respective developers to actually DO that, so obviously I won't. Anyways, that's all I got for now, I'll update this in the future with any further changes to the file structure and such.
