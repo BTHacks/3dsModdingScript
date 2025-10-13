@@ -40,24 +40,35 @@ import tkinter as tk
 # Imports the file dialog library
 from tkinter import filedialog
 def buttonclick():
-    localvar = int(instructionnumber) # Sets the local variable to the instruction number variable
-    localvar = localvar + 1 # Increases it by one
+    global instructionnumber # Declares intent to modify a global variable
+    global drivemount # Declares intent to modify THIS global variable as well
+    instructionnumber = instructionnumber + 1 # Increases it by one
     del instlist[0] # Deletes the initial entry in the main list
     txt.delete(1.0, "end") # Deletes the entire text window
     txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
-    if localvar == 10:
+    if instructionnumber == 2:
         dirname = filedialog.askdirectory() # Pops up a directory input
-        os.makedirs(dirname + "gaming") # Makes a new folder based on said directory input
-    pass
+        drivemount = dirname
+        pass
+    elif instructionnumber == 3:
+        try:
+            os.makedirs(drivemount + "HackingScriptFiles/")
+        except FileExistsError:
+            pass
+        urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
+        with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
+            zObject.extractall(path=drivemount) # Unzips the files at the specified location
 instructionnumber = int(0) # Sets the instruction number variable
-instlist = ["a", "b", "c", "whatever the 4gth letter was, i forgor"] # Sets the instruction list 
+# Arduously long list of every instruction
+instlist = ["Welcome to the Nintendo 3DS modding script! \nThis script will assist you in modding your\nNintendo 3DS family system! \n \nBy continuing, you agree to this script creating\nand modifying files on your SD Card", "Please turn off your system and remove the SD/MicroSD card\nthen put it in your computer. You will indicate where it is mounted in the upcoming dialog", "The script will now download needed files to the SD card", "4th string for testing"]
+drivemount = str("N/A")
 mainwindow = tk.Tk() # Sets the command to the mainwindow variable
 mainwindow.title("3DS Modding Script UI") # Sets title of the window
 mainwindow.geometry("640x480") # Sets the resolution of the window
 frame = tk.Frame(mainwindow) # Creates an in-window frame
 frame['width'] = 600 # Sets pixel density of the frame
 frame['height'] = 400
-txt = tk.Text(frame, width=40, height=10) # Creates a text box within the frame
+txt = tk.Text(frame, width=70, height=20) # Creates a text box within the frame
 txt.insert(1.0, instlist[0]) # Inserts text from a defined list
 frame.pack() # Pack functions are needed to actually insert elements
 txt.pack()
