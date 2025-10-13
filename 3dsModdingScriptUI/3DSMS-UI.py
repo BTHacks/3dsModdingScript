@@ -37,16 +37,20 @@ import time
 #
 # Imports the tkinter library for UI usage
 import tkinter as tk
+# Imports the file dialog library
+from tkinter import filedialog
 def buttonclick():
-    localvar = int(instructionnumber)
-    localvar = localvar + 1
-    del instlist[0]
-    txt.delete(1.0, "end")
-    txt.insert(1.0, instlist[0])
-
+    localvar = int(instructionnumber) # Sets the local variable to the instruction number variable
+    localvar = localvar + 1 # Increases it by one
+    del instlist[0] # Deletes the initial entry in the main list
+    txt.delete(1.0, "end") # Deletes the entire text window
+    txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
+    if localvar == 10:
+        dirname = filedialog.askdirectory() # Pops up a directory input
+        os.makedirs(dirname + "gaming") # Makes a new folder based on said directory input
     pass
 instructionnumber = int(0) # Sets the instruction number variable
-instlist = ["asdfnjasrnfkaenrflhaernf"] # Sets the instruction list 
+instlist = ["a", "b", "c", "whatever the 4gth letter was, i forgor"] # Sets the instruction list 
 mainwindow = tk.Tk() # Sets the command to the mainwindow variable
 mainwindow.title("3DS Modding Script UI") # Sets title of the window
 mainwindow.geometry("640x480") # Sets the resolution of the window
