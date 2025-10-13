@@ -58,9 +58,12 @@ def buttonclick():
         urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
         with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
             zObject.extractall(path=drivemount) # Unzips the files at the specified location
+    elif instructionnumber == 4:
+        os.chdir(drivemount) # Sets the target directory to the mounted drive
+        os.startfile("MSET9-Windows.bat") # Launches the target .bat file
 instructionnumber = int(0) # Sets the instruction number variable
 # Arduously long list of every instruction
-instlist = ["Welcome to the Nintendo 3DS modding script! \nThis script will assist you in modding your\nNintendo 3DS family system! \n \nBy continuing, you agree to this script creating\nand modifying files on your SD Card", "Please turn off your system and remove the SD/MicroSD card\nthen put it in your computer. You will indicate where it is mounted in the upcoming dialog", "The script will now download needed files to the SD card", "4th string for testing"]
+instlist = ["Welcome to the Nintendo 3DS modding script! \nThis script will assist you in modding your\nNintendo 3DS family system! \n \nBy continuing, you agree to this script creating\nand modifying files on your SD Card", "Please turn off your system and remove the SD/MicroSD card\nthen put it in your computer. You will indicate where it is mounted in the upcoming dialog", "The script will now download needed files to the SD card", "In the next step, you will interact with the MSET9 batch script \nAll needed steps will be displayed", "####### \nMSET9 Script Instructions \n####### \n1. Press the number for your console and firmware version \n2. Press the number 1 to create the hacked ID1 \n3. When done, press enter to close the script"]
 drivemount = str("N/A")
 mainwindow = tk.Tk() # Sets the command to the mainwindow variable
 mainwindow.title("3DS Modding Script UI") # Sets title of the window
