@@ -36,11 +36,17 @@ import time
 # time.sleep(time in seconds)
 #
 # Imports the tkinter library for UI usage
-import tkinter
+import tkinter as tk
 
-# Function to run a UI. Still learning how all this works so idk
-def msui():
-    tkinter._test()
+def continue_script(): # Script
+    
     pass
 
-msui()
+mainwindow = tk.Tk()
+mainwindow.title("Simple Tkinter App")
+mainwindow.geometry("640x480")
+label = tk.Label(mainwindow, text="Welcome to Tkinter!")
+label.pack(pady=20)
+button = tk.Button(mainwindow, text="Continue", command=continue_script)
+button.pack()
+mainwindow.mainloop()
