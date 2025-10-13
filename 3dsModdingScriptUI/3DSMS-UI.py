@@ -48,11 +48,11 @@ def buttonclick():
     txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
     if instructionnumber == 2:
         dirname = filedialog.askdirectory() # Pops up a directory input
-        drivemount = dirname
+        drivemount = dirname # Sets the global drivemount variable to the specified directory
         pass
     elif instructionnumber == 3:
         try:
-            os.makedirs(drivemount + "HackingScriptFiles/")
+            os.makedirs(drivemount + "HackingScriptFiles/") # Creates a neccessary directory for the script
         except FileExistsError:
             pass
         urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
