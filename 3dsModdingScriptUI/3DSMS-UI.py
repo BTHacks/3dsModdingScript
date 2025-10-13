@@ -37,18 +37,26 @@ import time
 #
 # Imports the tkinter library for UI usage
 import tkinter as tk
+def buttonclick():
+    localvar = int(instructionnumber)
+    localvar = localvar + 1
+    del instlist[0]
+    txt.delete(1.0, "end")
+    txt.insert(1.0, instlist[0])
 
-def continue_script(): # Just a button test script, nothing more
-    os.makedirs("C:\\Poopass\\")
     pass
-def main_window(): # Script to create the main window of the program
-    mainwindow = tk.Tk()
-    mainwindow.title("3DS Modding Script UI") # Sets title of the window
-    mainwindow.geometry("640x480") # Sets the resolution of the window
-    label = tk.Label(mainwindow, text="We are so fucking back") # Sets the main label text of the window
-    label.pack(pady=20) # Sets the distance of the label from the top of the screen
-    button = tk.Button(mainwindow, text="Continue", command=continue_script) # Creates a button (windowlocation, text on button, command for button to execute)
-    button.pack() # Sets distance of button from the last object in the window
-    mainwindow.mainloop() # Starts the window loop
-
-main_window()
+instructionnumber = int(0) # Sets the instruction number variable
+instlist = ["asdfnjasrnfkaenrflhaernf"] # Sets the instruction list 
+mainwindow = tk.Tk() # Sets the command to the mainwindow variable
+mainwindow.title("3DS Modding Script UI") # Sets title of the window
+mainwindow.geometry("640x480") # Sets the resolution of the window
+frame = tk.Frame(mainwindow) # Creates an in-window frame
+frame['width'] = 600 # Sets pixel density of the frame
+frame['height'] = 400
+txt = tk.Text(frame, width=40, height=10) # Creates a text box within the frame
+txt.insert(1.0, instlist[0]) # Inserts text from a defined list
+frame.pack() # Pack functions are needed to actually insert elements
+txt.pack()
+button = tk.Button(mainwindow, text="Continue", command=buttonclick) # Creates a button (windowlocation, text on button, command for button to execute))
+button.pack()
+mainwindow.mainloop() # Starts the window loop
