@@ -38,15 +38,17 @@ import time
 # Imports the tkinter library for UI usage
 import tkinter as tk
 
-def continue_script(): # Script
-    
+def continue_script(): # Just a button test script, nothing more
+    os.makedirs("C:\\Poopass\\")
     pass
+def main_window(): # Script to create the main window of the program
+    mainwindow = tk.Tk()
+    mainwindow.title("3DS Modding Script UI") # Sets title of the window
+    mainwindow.geometry("640x480") # Sets the resolution of the window
+    label = tk.Label(mainwindow, text="We are so fucking back") # Sets the main label text of the window
+    label.pack(pady=20) # Sets the distance of the label from the top of the screen
+    button = tk.Button(mainwindow, text="Continue", command=continue_script) # Creates a button (windowlocation, text on button, command for button to execute)
+    button.pack() # Sets distance of button from the last object in the window
+    mainwindow.mainloop() # Starts the window loop
 
-mainwindow = tk.Tk()
-mainwindow.title("Simple Tkinter App")
-mainwindow.geometry("640x480")
-label = tk.Label(mainwindow, text="Welcome to Tkinter!")
-label.pack(pady=20)
-button = tk.Button(mainwindow, text="Continue", command=continue_script)
-button.pack()
-mainwindow.mainloop()
+main_window()
