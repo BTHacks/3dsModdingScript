@@ -1,5 +1,12 @@
 This is a script for modding a Nintendo 3ds, based on the guides provided at https://3ds.hacks.guide
 
+Instructions to run:
+
+Go to the releases tab
+
+Download whichever version you would like to use
+
+Run the file
 
 Requirements:
 
@@ -16,8 +23,6 @@ This program also assumes you're running on Windows. I may make a cross platform
 This was made for a school project, it will NOT be the most up to date guide. For the most up to date guides, please visit the hacks.guide website or their discords
 
 CREDITS:
-
-Guides from https://hacks.guide
 
 MSET9 exploit: https://github.com/hacks-guide/MSET9
 
