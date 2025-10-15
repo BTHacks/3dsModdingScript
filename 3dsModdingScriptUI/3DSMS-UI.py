@@ -1,5 +1,4 @@
 # Imports a URL request library to download files
-from dis import Instruction
 import urllib.request
 # Usage: urllib.request.urlretrieve("URL", "filename.fileextension")
 #
@@ -10,9 +9,6 @@ import os
 #   os.makedirs(r"directorypath")
 # except FileExistsError
 #   pass
-#
-# Imports the random library, just so I can randomize the ASCII art at startup
-import random
 #
 # Imports the ZipFile library, used to unzip files
 from zipfile import ZipFile
@@ -30,11 +26,6 @@ from zipfile import ZipFile
 import shutil
 # Usage for removal:
 # shutil.rmtree(path)
-#
-# Imports time library for wait functions
-import time
-# Usage:
-# time.sleep(time in seconds)
 #
 # Imports the tkinter library for UI usage
 import tkinter as tk
