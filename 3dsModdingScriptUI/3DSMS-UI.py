@@ -29,6 +29,8 @@ import shutil
 #
 # Imports the tkinter library for UI usage
 import tkinter as tk
+# Imports ttk library
+from tkinter import ttk
 # Imports the file dialog library
 from tkinter import filedialog
 
@@ -101,20 +103,18 @@ def buttonclick():
             shutil.rmtree(drivemount + "HackingScriptFiles") # Deletes the hackingscriptfiles folder and all files inside
         except FileNotFoundError:
             pass
+s = ttk.Style() # Sets the variable s to the style command
+s.theme_use("winnative") # Sets the theme to the native windows theming
 instructionnumber = int(0) # Sets the instruction number variable
 instlist = ["Nothing here lmao"] # Creates an empty list
 createinstlist() # Function to add to that list. I was doing it in line here, but it was just getting unwieldy honestly.
-drivemount = str("N/A")
+drivemount = str("N/A") # Creates an empty global variable (okay not actually empty but for all intents and purposes, it is empty)
 mainwindow = tk.Tk() # Sets the command to the mainwindow variable
 mainwindow.title("3DS Modding Script UI") # Sets title of the window
 mainwindow.geometry("640x480") # Sets the resolution of the window
-frame = tk.Frame(mainwindow) # Creates an in-window frame
-frame['width'] = 600 # Sets pixel density of the frame
-frame['height'] = 400
-txt = tk.Text(frame, width=70, height=20) # Creates a text box within the frame
+txt = tk.Text(mainwindow, width=70, height=20) # Creates a text box within the frame
 txt.insert(1.0, instlist[0]) # Inserts text from a defined list
-frame.pack() # Pack functions are needed to actually insert elements
-txt.pack()
-button = tk.Button(mainwindow, text="Continue", command=buttonclick) # Creates a button (windowlocation, text on button, command for button to execute))
-button.pack()
+txt.pack() # Dunno what this command really does, but without it the text doesn't appear, and the documentation for the tk library says it's needed so idk
+button = ttk.Button(mainwindow, text="Continue", command=buttonclick) # Creates a button (windowlocation, text on button, command for button to execute))
+button.pack() # Same here as with the txt.pack command, it's needed but I dunno why
 mainwindow.mainloop() # Starts the window loop
