@@ -12,9 +12,11 @@ Requirements:
 
 Python 3.9
 
-Windows
+Windows/Linux
 
-ALL LIBRARIES USED IN THE SCRIPT COME DEFAULT WITH PYTHON, NOTHING ELSE NEEDS TO BE INSTALLED IF YOU HAVE PYTHON 3.9
+No external libraries need to be installed on Windows, however on linux you will need to install the tkinter library using the following command
+
+sudo apt install python3-tk
 
 This program will download files to your computer, all file download sources will be listed below, as well as commented in the source code
 
