@@ -61,13 +61,21 @@ def createinstlist():
 def buttonclick():
     global instructionnumber # Declares intent to modify a global variable
     global drivemount # Declares intent to modify THIS global variable as well
+    global Mset9type
     instructionnumber = instructionnumber + 1 # Increases it by one
     del instlist[0] # Deletes the initial entry in the main list
     txt.delete(1.0, "end") # Deletes the entire text window
     txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
     if instructionnumber == 2:
         dirname = filedialog.askdirectory() # Pops up a directory input
-        drivemount = dirname # Sets the global drivemount variable to the specified directory
+        if platform.system() == "Windows":
+            drivemount = dirname # Sets the global drivemount variable to the specified directory
+            Mset9type = str("win")
+            pass
+        elif platform.system() == "Linux":
+            drivemount = dirname + "/"
+            Mset9type = str("lin")
+            pass
         pass
     elif instructionnumber == 3:
         try:
@@ -78,17 +86,13 @@ def buttonclick():
         with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
             zObject.extractall(path=drivemount) # Unzips the files at the specified location
     elif instructionnumber == 4:
-        os.chdir(drivemount) # Sets the target directory to the mounted drive
-        os.startfile("MSET9-Windows.bat") # Launches the target .bat file
+        runmset(Mset9type)
     elif instructionnumber == 6:
-        os.chdir(drivemount)
-        os.startfile("MSET9-Windows.bat")
+        runmset(Mset9type)
     elif instructionnumber == 8:
-        os.chdir(drivemount)
-        os.startfile("MSET9-Windows.bat")
+        runmset(Mset9type)
     elif instructionnumber == 10:
-        os.chdir(drivemount)
-        os.startfile("MSET9-Windows.bat")
+        runmset(Mset9type)
     elif instructionnumber == 12:
         urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", drivemount + "finalize.romfs") # Downloads a needed file right to the specified directory
         try:
@@ -109,6 +113,18 @@ def buttonclick():
             shutil.rmtree(drivemount + "HackingScriptFiles") # Deletes the hackingscriptfiles folder and all files inside
         except FileNotFoundError:
             pass
+        pass
+    pass
+def runmset(x):
+    if x == "win":
+        os.chdir(drivemount)
+        os.startfile("MSET9-Windows.bat")
+        pass
+    elif x == "lin":
+        os.chdir(drivemount)
+        os.system("python3 mset9.py")
+        pass
+    pass
 instructionnumber = int(0) # Sets the instruction number variable
 instlist = ["Nothing here lmao"] # Creates an empty list
 createinstlist() # Function to add to that list. I was doing it in line here, but it was just getting unwieldy honestly.
