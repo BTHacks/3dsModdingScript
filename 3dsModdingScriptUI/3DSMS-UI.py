@@ -72,7 +72,7 @@ def buttonclick():
             drivemount = dirname # Sets the global drivemount variable to the specified directory
             Mset9type = str("win")
             pass
-        elif platform.system() == "Linux":
+        elif platform.system() == "Linux": # Adds changes to this function that allow it to work within Linux operating systems
             drivemount = dirname + "/"
             Mset9type = str("lin")
             pass
@@ -115,7 +115,7 @@ def buttonclick():
             pass
         pass
     pass
-def runmset(x):
+def runmset(x): # A generic function to run mset9 based on what operating system is in use
     if x == "win":
         os.chdir(drivemount)
         os.startfile("MSET9-Windows.bat")
