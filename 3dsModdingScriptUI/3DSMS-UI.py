@@ -27,8 +27,12 @@ import shutil
 # Usage for removal:
 # shutil.rmtree(path)
 #
-# Imports the tkinter library for UI usage
-import tkinter as tk
+# Imports the tkinter library for UI usage, adds error catching for if the user doesn't have this library, as it isn't default on Linux
+try:
+    import tkinter as tk
+except:
+    answer = str(input("The Tkinter library is required to run this program. If you see this error and you're on linux, run the command listed in the readme. If you're on Windows, please submit an issue report so we can look further into it. Press any key to close the script"))
+    quit()
 # Imports ttk library
 from tkinter import ttk
 # Imports the file dialog library
