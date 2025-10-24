@@ -63,6 +63,7 @@ def buttonclick():
     global Mset9type
     Mset9type = str("lin")
     instructionnumber = instructionnumber + 1 # Increases it by one
+    print(instructionnumber)
     del instlist[0] # Deletes the initial entry in the main list
     txt.delete(1.0, "end") # Deletes the entire text window
     txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
@@ -86,7 +87,7 @@ def buttonclick():
         runmset(Mset9type)
     elif instructionnumber == 10:
         runmset(Mset9type)
-    elif instructionnumber == 12:
+    elif instructionnumber == 11:
         urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", drivemount + "finalize.romfs") # Downloads a needed file right to the specified directory
         try:
             os.makedirs(drivemount + "luma") # Makes this directory if it doesn't already exist
@@ -97,7 +98,7 @@ def buttonclick():
         except FileExistsError:
             pass
         urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", drivemount + "luma/payloads/x_finalize_helper.firm") # Downloads a needed file right to the specified directory
-    elif instructionnumber == 15:
+    elif instructionnumber == 14:
         try:
             shutil.rmtree(drivemount + "gm9/backups") # Deletes the backups folder and all files inside
         except FileNotFoundError:
