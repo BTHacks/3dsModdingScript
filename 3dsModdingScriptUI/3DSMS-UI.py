@@ -62,57 +62,112 @@ def buttonclick():
     global instructionnumber # Declares intent to modify a global variable
     global drivemount # Declares intent to modify THIS global variable as well
     global Mset9type
-    Mset9type = str("win")
-    instructionnumber = instructionnumber + 1 # Increases it by one
-    del instlist[0] # Deletes the initial entry in the main list
-    txt.delete(1.0, "end") # Deletes the entire text window
-    txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
-    if instructionnumber == 2:
-        dirname = filedialog.askdirectory() # Pops up a directory input
-        drivemount = dirname # Sets the global drivemount variable to the specified directory
+    if platform.system() == "Windows":
+        Mset9type = str("win")
+        instructionnumber = instructionnumber + 1 # Increases it by one
+        del instlist[0] # Deletes the initial entry in the main list
+        txt.delete(1.0, "end") # Deletes the entire text window
+        txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
+        if instructionnumber == 2:
+            dirname = filedialog.askdirectory() # Pops up a directory input
+            drivemount = dirname # Sets the global drivemount variable to the specified directory
+            pass
+        elif instructionnumber == 3:
+            try:
+                os.makedirs(drivemount + "HackingScriptFiles") # Creates a neccessary directory for the script
+            except FileExistsError:
+                pass
+            urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
+            with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
+                zObject.extractall(path=drivemount) # Unzips the files at the specified location
+        elif instructionnumber == 4:
+            runmset(Mset9type)
+        elif instructionnumber == 6:
+            runmset(Mset9type)
+        elif instructionnumber == 8:
+            runmset(Mset9type)
+        elif instructionnumber == 10:
+            runmset(Mset9type)
+        elif instructionnumber == 12:
+            urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", drivemount + "finalize.romfs") # Downloads a needed file right to the specified directory
+            try:
+                os.makedirs(drivemount + "luma") # Makes this directory if it doesn't already exist
+            except FileExistsError:
+                pass
+            try:
+                os.makedirs(drivemount + "luma/payloads") # Makes this directory if it doesn't already exist
+            except FileExistsError:
+                pass
+            urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", drivemount + "luma/payloads/x_finalize_helper.firm") # Downloads a needed file right to the specified directory
+        elif instructionnumber == 15:
+            try:
+                shutil.rmtree(drivemount + "gm9/backups") # Deletes the backups folder and all files inside
+            except FileNotFoundError:
+                pass
+            try:
+                shutil.rmtree(drivemount + "HackingScriptFiles") # Deletes the hackingscriptfiles folder and all files inside
+            except FileNotFoundError:
+                pass
+            pass
         pass
-    elif instructionnumber == 3:
-        try:
-            os.makedirs(drivemount + "HackingScriptFiles") # Creates a neccessary directory for the script
-        except FileExistsError:
+    elif platform.system() == "Linux":
+        Mset9type = str("lin")
+        instructionnumber = instructionnumber + 1 # Increases it by one
+        print(instructionnumber)
+        del instlist[0] # Deletes the initial entry in the main list
+        txt.delete(1.0, "end") # Deletes the entire text window
+        txt.insert(1.0, instlist[0]) # Inserts the new first entry in the list
+        if instructionnumber == 2:
+            dirname = filedialog.askdirectory() # Pops up a directory input
+            drivemount = dirname + "/"
             pass
-        urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
-        with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
-            zObject.extractall(path=drivemount) # Unzips the files at the specified location
-    elif instructionnumber == 4:
-        runmset(Mset9type)
-    elif instructionnumber == 6:
-        runmset(Mset9type)
-    elif instructionnumber == 8:
-        runmset(Mset9type)
-    elif instructionnumber == 10:
-        runmset(Mset9type)
-    elif instructionnumber == 12:
-        urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", drivemount + "finalize.romfs") # Downloads a needed file right to the specified directory
-        try:
-            os.makedirs(drivemount + "luma") # Makes this directory if it doesn't already exist
-        except FileExistsError:
-            pass
-        try:
-            os.makedirs(drivemount + "luma/payloads") # Makes this directory if it doesn't already exist
-        except FileExistsError:
-            pass
-        urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", drivemount + "luma/payloads/x_finalize_helper.firm") # Downloads a needed file right to the specified directory
-    elif instructionnumber == 15:
-        try:
-            shutil.rmtree(drivemount + "gm9/backups") # Deletes the backups folder and all files inside
-        except FileNotFoundError:
-            pass
-        try:
-            shutil.rmtree(drivemount + "HackingScriptFiles") # Deletes the hackingscriptfiles folder and all files inside
-        except FileNotFoundError:
+        elif instructionnumber == 3:
+            try:
+                os.makedirs(drivemount + "HackingScriptFiles") # Creates a neccessary directory for the script
+            except FileExistsError:
+                pass
+            urllib.request.urlretrieve("https://github.com/hacks-guide/MSET9/releases/download/v2.1/MSET9-v2.1.zip", drivemount + "HackingScriptFiles/MSET9.zip") # Downloads the files for MSET9
+            with ZipFile(drivemount + "HackingScriptFiles/MSET9.zip", 'r') as zObject: # Sets the needed variables for ZipFIle to work
+                zObject.extractall(path=drivemount) # Unzips the files at the specified location
+        elif instructionnumber == 4:
+            runmset(Mset9type)
+        elif instructionnumber == 6:
+            runmset(Mset9type)
+        elif instructionnumber == 8:
+            runmset(Mset9type)
+        elif instructionnumber == 10:
+            runmset(Mset9type)
+        elif instructionnumber == 11:
+            urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs", drivemount + "finalize.romfs") # Downloads a needed file right to the specified directory
+            try:
+                os.makedirs(drivemount + "luma") # Makes this directory if it doesn't already exist
+            except FileExistsError:
+                pass
+            try:
+                os.makedirs(drivemount + "luma/payloads") # Makes this directory if it doesn't already exist
+            except FileExistsError:
+                pass
+            urllib.request.urlretrieve("https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm", drivemount + "luma/payloads/x_finalize_helper.firm") # Downloads a needed file right to the specified directory
+        elif instructionnumber == 14:
+            try:
+                shutil.rmtree(drivemount + "gm9/backups") # Deletes the backups folder and all files inside
+            except FileNotFoundError:
+                pass
+            try:
+                shutil.rmtree(drivemount + "HackingScriptFiles") # Deletes the hackingscriptfiles folder and all files inside
+            except FileNotFoundError:
+                pass
             pass
         pass
-    pass
 def runmset(x): # A generic function to run mset9 based on what operating system is in use
-    os.chdir(drivemount)
-    os.startfile("MSET9-Windows.bat")
-    pass
+    if platform.system() == "Windows":
+        os.chdir(drivemount)
+        os.startfile("MSET9-Windows.bat")
+        pass
+    elif platform.system() == "Linux":
+        os.chdir(drivemount)
+        os.system("python3 mset9.py")
+        pass
 if platform.system() == "Windows":
     instructionnumber = int(0) # Sets the instruction number variable
     instlist = ["Nothing here lmao"] # Creates an empty list
@@ -129,5 +184,21 @@ if platform.system() == "Windows":
     button = ttk.Button(mainwindow, text="Continue", command=buttonclick) # Creates a button (windowlocation, text on button, command for button to execute))
     button.pack() # Same here as with the txt.pack command, it's needed but I dunno why
     mainwindow.mainloop() # Starts the window loop
+elif platform.system() == "Linux":
+    instructionnumber = int(0) # Sets the instruction number variable
+    instlist = ["Nothing here lmao"] # Creates an empty list
+    createinstlist() # Function to add to that list. I was doing it in line here, but it was just getting unwieldy honestly.
+    drivemount = str("N/A") # Creates an empty global variable (okay not actually empty but for all intents and purposes, it is empty)
+    mainwindow = tk.Tk() # Sets the command to the mainwindow variable
+    mainwindow.title("3DS Modding Script UI") # Sets title of the window
+    mainwindow.geometry("640x480") # Sets the resolution of the window
+    s = ttk.Style() # Sets the variable s to the style command
+    s.theme_use("classic") # Sets the theme to the default Linux theme
+    txt = tk.Text(mainwindow, width=70, height=20) # Creates a text box within the frame
+    txt.insert(1.0, instlist[0]) # Inserts text from a defined list
+    txt.pack() # Dunno what this command really does, but without it the text doesn't appear, and the documentation for the tk library says it's needed so idk
+    button = ttk.Button(mainwindow, text="Continue", command=buttonclick) # Creates a button (windowlocation, text on button, command for button to execute))
+    button.pack() # Same here as with the txt.pack command, it's needed but I dunno why
+    mainwindow.mainloop() # Starts the window loop
 else:
-    answer = input(str("Hey wait, this isn't Windows! Did you download the wrong version?"))
+    answer = input(str("You're running this on an unsupported operating system. Please run this on Windows or Linux, and if you are and you're still getting this error, please submit an issue report"))
