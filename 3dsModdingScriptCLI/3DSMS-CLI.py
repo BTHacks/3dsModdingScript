@@ -139,8 +139,8 @@ def startup(): # Literally just a cool lookin' ASCII art startup thing. Entirely
     print("") # Prints an empty line
     print("######################################################################################") # Prints the bottom border
     print("3DS Hacking Script")
-    print("Version 2.0")
-    print("'The One That Changed Nothing In The CLI Release'")
+    print("Version 3.0")
+    print("'The One That Made The CLI Version Look Obsolete'")
     print("######################################################################################")
     time.sleep(3) # Adds a 3 second wait before continuing execution so you can see the awesome ASCII art
     guidedisclaimer() # Calls the disclaimer function, continuing the script
