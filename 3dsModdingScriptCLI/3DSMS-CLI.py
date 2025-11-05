@@ -34,7 +34,7 @@ import shutil
 import time
 # Usage:
 # time.sleep(time in seconds)
-
+# yeahhhhhh no way in hell am I rewriting half this script for Linux.
 # The next few hundred lines are just function definitions.. I don't know if this is good programming, or if this whole program is held together with duct tape and dreams. Either way, who cares!
 def screenrefresh(x): # Simple few lines of code for a screen refresh
     loopvar = int(x) # Sets loopvar to the variable x
