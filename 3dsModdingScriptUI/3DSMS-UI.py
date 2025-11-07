@@ -39,7 +39,104 @@ from tkinter import ttk
 from tkinter import filedialog
 # Imports the platform module to detect operating systems
 import platform
+# Imports the random module for use with splash screens
+import random
 
+def startup(): # Makes a random splash screen in the terminal
+    print("######################################################################################") # Prints a top border
+    print("") # Prints an empty line
+    randomnum = random.randint(1, 5) # Sets the variable randomnum to a random integer, which then determines which ASCII art shows
+    if randomnum == 1: 
+        print("________ ________    _________                    ")
+        print("\_____  \\______ \  /   _____/                    ")
+        print("  _(__  < |    |  \ \_____  \                     ")
+        print(" /       \|    `   \/        \                    ")
+        print("/______  /_______  /_______  /                    ")
+        print("       \/        \/        \/                     ")
+        print("  ___ ___                __   .__                 ")
+        print(" /   |   \_____    ____ |  | _|__| ____    ____   ")
+        print("/    ~    \__  \ _/ ___\|  |/ /  |/    \  / ___\  ")
+        print("\    Y    // __ \\  \___|    <|  |   |  \/ /_/  > ")
+        print(" \___|_  /(____  /\___  >__|_ \__|___|  /\___  /  ")
+        print("       \/      \/     \/     \/       \//_____/   ")
+        print("  _________            .__        __              ")
+        print(" /   _____/ ___________|__|______/  |_            ")
+        print(" \_____  \_/ ___\_  __ \  \____ \   __\           ")
+        print(" /        \  \___|  | \/  |  |_> >  |             ")
+        print("/_______  /\___  >__|  |__|   __/|__|             ")
+        print("        \/     \/         |__|                    ")
+    elif randomnum == 2: 
+        print("_____  ____  ____                        ")
+        print("\__  \/  _ \/ ___\                       ")
+        print("  /  || | \||    \                       ")
+        print(" _\  || |_/|\___ |                       ")
+        print("/____/\____/\____/                       ")
+        print(" _     ____  ____ _  __ _  _      _____  ")
+        print("/ \ /|/  _ \/   _Y |/ // \/ \  /|/  __/  ")
+        print("| |_||| / \||  / |   / | || |\ ||| |  _  ")
+        print("| | ||| |-|||  \_|   \ | || | \||| |_//  ")
+        print("\_/ \|\_/ \|\____|_|\_\\_/\_/  \|\____\  ")
+        print(" ____  ____ ____  _  ____ _____          ")
+        print("/ ___\/   _Y  __\/ \/  __Y__ __\         ")
+        print("|    \|  / |  \/|| ||  \/| / \           ")
+        print("\___ ||  \_|    /| ||  __/ | |           ")
+        print("\____/\____|_/\_\\_/\_/    \_/           ")
+    elif randomnum == 3: 
+        print("  /$$$$$$  /$$$$$$$   /$$$$$$                                         ")
+        print(" /$$__  $$| $$__  $$ /$$__  $$                                        ")
+        print("|__/  \ $$| $$  \ $$| $$  \__/                                        ")
+        print("   /$$$$$/| $$  | $$|  $$$$$$                                         ")
+        print("  |___  $$| $$  | $$ \____  $$                                        ")
+        print(" /$$  \ $$| $$  | $$ /$$  \ $$                                        ")
+        print("|  $$$$$$/| $$$$$$$/|  $$$$$$/                                        ")
+        print(" \______/ |_______/  \______/                                         ")
+        print("")
+        print(" /$$   /$$                     /$$       /$$                          ")
+        print("| $$  | $$                    | $$      |__/                          ")
+        print("| $$  | $$  /$$$$$$   /$$$$$$$| $$   /$$ /$$ /$$$$$$$   /$$$$$$       ")
+        print("| $$$$$$$$ |____  $$ /$$_____/| $$  /$$/| $$| $$__  $$ /$$__  $$      ")
+        print("| $$__  $$  /$$$$$$$| $$      | $$$$$$/ | $$| $$  \ $$| $$  \ $$      ")
+        print("| $$  | $$ /$$__  $$| $$      | $$_  $$ | $$| $$  | $$| $$  | $$      ")
+        print("| $$  | $$|  $$$$$$$|  $$$$$$$| $$ \  $$| $$| $$  | $$|  $$$$$$$      ")
+        print("|__/  |__/ \_______/ \_______/|__/  \__/|__/|__/  |__/ \____  $$      ")
+        print("                                                       /$$  \ $$      ")
+        print("                                                      |  $$$$$$/      ")
+        print("                                                       \______/       ")
+        print("  /$$$$$$                      /$$             /$$                    ")
+        print(" /$$__  $$                    |__/            | $$                    ")
+        print("| $$  \__/  /$$$$$$$  /$$$$$$  /$$  /$$$$$$  /$$$$$$                  ")
+        print("|  $$$$$$  /$$_____/ /$$__  $$| $$ /$$__  $$|_  $$_/                  ")
+        print(" \____  $$| $$      | $$  \__/| $$| $$  \ $$  | $$                    ")
+        print(" /$$  \ $$| $$      | $$      | $$| $$  | $$  | $$ /$$                ")
+        print("|  $$$$$$/|  $$$$$$$| $$      | $$| $$$$$$$/  |  $$$$/                ")
+        print(" \______/  \_______/|__/      |__/| $$____/    \___/                  ")
+        print("                                  | $$                                ")
+        print("                                  | $$                                ")
+        print("                                  |__/                                ")
+    elif randomnum == 4:
+        print("  ____  _____   _____                   ")
+        print(" |___ \|  __ \ / ____|                  ")
+        print("   __) | |  | | (___                    ")
+        print("  |__ <| |  | |\___ \                   ")
+        print("  ___) | |__| |____) |                  ")
+        print(" |____/|_____/|_____/    _              ")
+        print(" | |  | |          | |  (_)             ")
+        print(" | |__| | __ _  ___| | ___ _ __   __ _  ")
+        print(" |  __  |/ _` |/ __| |/ / | '_ \ / _` | ")
+        print(" | |  | | (_| | (__|   <| | | | | (_| | ")
+        print(" |_|__|_|\__,_|\___|_|\_\_|_| |_|\__, | ")
+        print("  / ____|         (_)     | |     __/ | ")
+        print(" | (___   ___ _ __ _ _ __ | |_   |___/  ")
+        print("  \___ \ / __| '__| | '_ \| __|         ")
+        print("  ____) | (__| |  | | |_) | |_          ")
+        print(" |_____/ \___|_|  |_| .__/ \__|         ")
+        print("                    | |                 ")
+        print("                    |_|                 ")
+    elif randomnum == 5:
+        print("Sorry, the ASCII art man isn't in today")
+        print("Please enjoy this boring, standard, regular boot screen.")
+    print("") # Prints an empty line
+    print("######################################################################################") # Prints the bottom border
 def createinstlist():
     del instlist[0]
     instlist.append("Welcome to the Nintendo 3DS modding script! \nThis script will assist you in modding your\nNintendo 3DS family system! \n \nBy continuing, you agree to this script creating\nand modifying files on your SD Card")
@@ -168,6 +265,8 @@ def runmset(x): # A generic function to run mset9 based on what operating system
         os.chdir(drivemount)
         os.system("python3 mset9.py")
         pass
+    pass
+startup() # Runs the random splash screen
 if platform.system() == "Windows":
     instructionnumber = int(0) # Sets the instruction number variable
     instlist = ["Nothing here lmao"] # Creates an empty list
